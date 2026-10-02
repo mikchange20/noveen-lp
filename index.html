@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N'OVEEN Lunch Box for car rentals</title>
+<meta name="description" content="A car-powered electric lunch box your rental customers can add to any trip around Iceland. Request a partner offer.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+
+<!-- TODO: replace every PARTNER_EMAIL / phone placeholder before sending -->
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo" aria-label="N'OVEEN home"><img src="assets/img/noveen-logo.png" alt="N'OVEEN" width="207" height="55"></a>
+  <a class="btn btn--small" href="#contact">Request partner offer</a>
+</header>
+
+<main id="top">
+
+  <!-- 01 · HERO -->
+  <section class="hero">
+    <div class="hero__copy">
+      <p class="eyebrow reveal-load" style="--d:0">For car rentals in Iceland</p>
+      <h1 class="hero__title">
+        <span class="line reveal-load" style="--d:1">Add more to</span>
+        <span class="line reveal-load" style="--d:2">every rental.</span>
+      </h1>
+      <p class="hero__lead reveal-load" style="--d:3">Give your customers a hot meal anywhere on the road.</p>
+      <p class="hero__sub reveal-load" style="--d:4">Electric lunch boxes made for road trips. Powered straight from the car. Easy to offer with every rental.</p>
+      <div class="hero__actions reveal-load" style="--d:5">
+        <a class="btn" href="#contact">Request partner offer</a>
+        <a class="btn btn--ghost" href="#how">See how it works</a>
+      </div>
+    </div>
+
+    <figure class="hero__visual reveal-load" style="--d:2">
+      <!-- PLACEHOLDER: replace with Gimmie the Trip photo (lunch box in/next to the car, Icelandic road, 12V plug visible) -->
+      <div class="scene" aria-hidden="true">
+        <svg class="scene__land" viewBox="0 0 600 520" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#cfdce8"/><stop offset="1" stop-color="#f3f6f9"/>
+            </linearGradient>
+          </defs>
+          <rect width="600" height="520" fill="url(#sky)"/>
+          <path class="layer l1" d="M0 300 L70 230 L120 260 L190 170 L250 230 L310 200 L380 120 L450 210 L520 180 L600 240 V520 H0Z" fill="#b4c6d8"/>
+          <path class="layer l1" d="M380 120 L405 152 L392 150 L380 162 L366 148 L356 150Z" fill="#eef3f7"/>
+          <path class="layer l2" d="M0 360 L90 300 L170 330 L260 280 L350 330 L440 290 L520 320 L600 300 V520 H0Z" fill="#8ea7bf"/>
+          <path class="layer l3" d="M0 420 Q150 380 300 400 T600 390 V520 H0Z" fill="#5d7b97"/>
+          <path class="layer l3 road" d="M250 520 Q300 450 330 420 Q345 405 360 400" fill="none" stroke="#eef3f7" stroke-width="3" stroke-dasharray="10 9"/>
+        </svg>
+        <img class="scene__product" src="assets/img/meal.jpg" alt="" width="900" height="900">
+        <span class="scene__chip"><span class="dot"></span>12 V · heating</span>
+      </div>
+      <figcaption class="ph-note">Placeholder · Gimmie the Trip photo goes here</figcaption>
+    </figure>
+
+    <ul class="facts" aria-label="Key facts">
+      <li><b>12 / 24 V</b> car powered</li>
+      <li><b>~20 min</b> to a hot meal</li>
+      <li><b>Thermal bag</b> included</li>
+      <li><b>30-month</b> warranty</li>
+    </ul>
+  </section>
+
+  <!-- 02 · VALUE -->
+  <section class="value section" id="value">
+    <div class="value__intro reveal">
+      <p class="eyebrow">Value for the rental</p>
+      <h2>A simple extra your customers will actually use.</h2>
+      <p>Icelandic road trips mean long driving days and changing plans. A car-powered lunch box lets travellers heat a meal on the way and stop where the view is worth it.</p>
+    </div>
+    <ul class="benefits">
+      <li class="benefit reveal">
+        <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="14" width="32" height="22" rx="6"/><circle cx="24" cy="25" r="5"/><path d="M24 36v6M18 6l-3 8M30 6l3 8"/></svg>
+        <h3>Car powered</h3>
+        <p>12/24 V from the vehicle. 230 V cable included.</p>
+      </li>
+      <li class="benefit reveal">
+        <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="27" r="15"/><path d="M24 27V18M20 6h8M24 6v6"/><path class="heat" d="M17 31c2-2 0-4 2-6M24 33c2-2 0-4 2-6"/></svg>
+        <h3>Hot meal in ~20 min</h3>
+        <p>Heats up while they drive.</p>
+      </li>
+      <li class="benefit reveal">
+        <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M9 18h30l-2 22H11z"/><path d="M17 18v-4a7 7 0 0 1 14 0v4"/><path d="M9 25h30"/></svg>
+        <h3>Thermal bag included</h3>
+        <p>Easy to store and hand over with the car.</p>
+      </li>
+      <li class="benefit reveal">
+        <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="6" width="30" height="36" rx="3"/><path d="M9 14h30"/><circle cx="24" cy="28" r="8"/><path d="M14 10h2M19 10h2"/></svg>
+        <h3>Easy turnaround</h3>
+        <p>Removable INOX container goes in the dishwasher. Spare containers and lids available.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 03 · HOW IT WORKS -->
+  <section class="how section" id="how">
+    <div class="how__head reveal">
+      <p class="eyebrow">How it works</p>
+      <h2>A hot meal in 5 simple steps.</h2>
+    </div>
+    <div class="route" id="route">
+      <div class="route__track" aria-hidden="true">
+        <div class="route__fill"></div>
+        <div class="route__car">
+          <svg viewBox="0 0 40 24"><path d="M4 16v-4l5-6h18l7 6h3v4z"/><circle cx="11" cy="17" r="3.4"/><circle cx="30" cy="17" r="3.4"/></svg>
+        </div>
+      </div>
+      <ol class="steps">
+        <li class="step"><span class="step__n">1</span><h3>Prepare</h3><p>Put the meal in the lunch box.</p></li>
+        <li class="step"><span class="step__n">2</span><h3>Pack</h3><p>Place it in the thermal bag.</p></li>
+        <li class="step"><span class="step__n">3</span><h3>Plug in</h3><p>Connect to the car's 12V socket.</p></li>
+        <li class="step step--heat"><span class="step__n">4</span><h3>Drive</h3><p>The meal heats on the way.</p></li>
+        <li class="step step--heat"><span class="step__n">5</span><h3>Stop &amp; eat</h3><p>Wherever it suits the trip.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 04 · BUSINESS MODELS -->
+  <section class="models section" id="models">
+    <div class="models__head reveal">
+      <p class="eyebrow">Business models</p>
+      <h2>One product. Two easy ways to offer it.</h2>
+    </div>
+    <div class="models__grid">
+      <article class="model-card reveal">
+        <h3>Rent it</h3>
+        <p>An optional extra with any vehicle.</p>
+        <div class="mock" aria-hidden="true">
+          <p class="mock__title">Extras for your trip</p>
+          <label class="mock__row"><span class="box"></span>Child seat</label>
+          <label class="mock__row"><span class="box"></span>Wi-Fi hotspot</label>
+          <label class="mock__row mock__row--on"><span class="box"></span>Car-powered lunch box <em>+ thermal bag</em></label>
+        </div>
+      </article>
+      <article class="model-card reveal">
+        <h3>Include it</h3>
+        <p>Part of selected camper, 4x4 or premium packages.</p>
+        <div class="mock" aria-hidden="true">
+          <p class="mock__title">Camper package includes</p>
+          <p class="mock__line">Bedding &amp; kitchen kit</p>
+          <p class="mock__line">Unlimited mileage</p>
+          <p class="mock__line mock__line--on">Car-powered lunch box</p>
+        </div>
+      </article>
+    </div>
+    <p class="models__note reveal">A small investment. Depending on your rental price, a unit can pay for itself within a few rentals.</p>
+  </section>
+
+  <!-- 05 · PRODUCT & COLOURS -->
+  <section class="product section" id="product">
+    <div class="product__head reveal">
+      <p class="eyebrow">Product &amp; colours</p>
+      <h2>Built for everyday use.</h2>
+      <ul class="chips">
+        <li>30-month warranty</li><li>12 / 24 / 230 V</li><li>60 W</li><li>Removable INOX container</li><li>Thermal bag included</li><li>Four colours</li>
+      </ul>
+    </div>
+
+    <div class="explorer reveal" id="explorer">
+      <div class="explorer__stage" id="stage">
+        <canvas id="lunchbox-3d" aria-label="Interactive 3D model of the lunch box. Drag to rotate."></canvas>
+        <div class="hotspots" id="hotspots"></div>
+        <img class="explorer__fallback" src="assets/img/layers.jpg" alt="Lunch box taken apart: small container, INOX container and heating base" width="900" height="900">
+        <div class="thermo" id="thermo" aria-live="polite">
+          <span class="thermo__val"><b id="temp">5</b>°C</span>
+          <span class="thermo__bar"><i id="tempbar"></i></span>
+          <span class="thermo__note">Sped up · real time about 20 min</span>
+        </div>
+        <p class="explorer__hint">Drag to rotate</p>
+      </div>
+
+      <div class="explorer__panel">
+        <div class="explorer__controls">
+          <button class="btn btn--ghost" id="btn-explode" aria-pressed="false">Take it apart</button>
+          <button class="btn btn--heat" id="btn-heat" aria-pressed="false">Plug in &amp; heat</button>
+        </div>
+        <div class="part" id="part" aria-live="polite">
+          <p class="part__kicker">Inside the box</p>
+          <h3 class="part__title">Tap a part to see what it does.</h3>
+          <p class="part__text">Take it apart to see the INOX container and the 0.5 L side container. Plug it in to watch the meal heat up.</p>
+        </div>
+        <ul class="parts-list" id="parts-list"></ul>
+      </div>
+    </div>
+
+    <div class="family reveal">
+      <p class="family__label">Four colours, same specification</p>
+      <div class="swatches" role="radiogroup" aria-label="Colour">
+        <button class="swatch" role="radio" aria-checked="false" data-colour="pearl"><img src="assets/img/pearl.jpg" alt="" width="900" height="900"><span>Pearl</span></button>
+        <button class="swatch" role="radio" aria-checked="true" data-colour="nature"><img src="assets/img/nature.jpg" alt="" width="900" height="900"><span>Nature</span></button>
+        <button class="swatch" role="radio" aria-checked="false" data-colour="city"><img src="assets/img/city.jpg" alt="" width="900" height="900"><span>City</span></button>
+        <button class="swatch" role="radio" aria-checked="false" data-colour="glamour"><img src="assets/img/glamour.jpg" alt="" width="900" height="900"><span>Glamour</span></button>
+      </div>
+    </div>
+
+    <div class="specs">
+      <details class="reveal">
+        <summary>Specs &amp; what's in the box</summary>
+        <div class="specs__grid">
+          <table>
+            <tbody>
+              <tr><th>Power supply</th><td>12 V car / 24 V truck / 230 V mains</td></tr>
+              <tr><th>Power</th><td>60 W</td></tr>
+              <tr><th>Heating</th><td>up to 60°C in about 20 min</td></tr>
+              <tr><th>Main container</th><td>1.1 L, stainless steel (INOX), removable</td></tr>
+              <tr><th>Extra container</th><td>0.5 L with lid</td></tr>
+              <tr><th>Dimensions</th><td>23 × 16 × 10.5 cm</td></tr>
+              <tr><th>Weight</th><td>0.63 kg</td></tr>
+              <tr><th>Materials</th><td>BPA-free</td></tr>
+              <tr><th>Dishwasher safe</th><td>Yes (containers)</td></tr>
+            </tbody>
+          </table>
+          <div>
+            <h4>What's in the box</h4>
+            <ul class="inbox">
+              <li><img src="assets/img/inox.jpg" alt="" width="900" height="900">Electric lunch box with 1.1 L INOX container</li>
+              <li><img src="assets/img/layers.jpg" alt="" width="900" height="900">0.5 L container with lid</li>
+              <li><span class="inbox__ico" aria-hidden="true">⟋⟍</span>Metal spoon and fork</li>
+              <li><img src="assets/img/cables.jpg" alt="" width="900" height="900">230 V power cable · 12 / 24 V car cable</li>
+              <li><img src="assets/img/bag.jpg" alt="" width="900" height="900">Thermal bag</li>
+            </ul>
+            <h4>Good to know</h4>
+            <ul class="small">
+              <li>Heating time depends on the meal and outside temperature. Cold Icelandic day or food from the fridge = give it a bit longer.</li>
+              <li>Keep the vent open while heating.</li>
+              <li>Never switch it on empty.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta" id="contact">
+    <div class="cta__inner reveal">
+      <h2>Let's test it in your fleet.</h2>
+      <p>No complicated setup. Start with a few units and see how your customers respond.</p>
+      <!-- TODO: replace PARTNER_EMAIL and phone -->
+      <a class="btn btn--light" href="mailto:PARTNER_EMAIL?subject=Partner%20offer%20%E2%80%93%20N'OVEEN%20lunch%20box">Request partner offer</a>
+      <p class="cta__contact"><a href="mailto:PARTNER_EMAIL">PARTNER_EMAIL</a> · <a href="tel:+000000000">+354 000 0000</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="assets/img/noveen-logo.png" alt="N'OVEEN" width="124" height="33">
+  <p>N'OVEEN Lunchee electric lunch box · LB715 Pearl · LB725 Nature · LB745 City · LB755 Glamour</p>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script type="module" src="js/model.js"></script>
+</body>
+</html>

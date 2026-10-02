@@ -1,0 +1,5 @@
+.claude/
+session-logs/
+.netlify/
+Thumbs.db
+.DS_Store
