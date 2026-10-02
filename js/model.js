@@ -15,6 +15,7 @@ const btnHeat = document.getElementById('btn-heat');
 const tempEl = document.getElementById('temp');
 const tempBar = document.getElementById('tempbar');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mobile = matchMedia('(pointer: coarse), (max-width: 760px)').matches; // lighter rendering on phones
 
 const COLOURS = {
   pearl:   { body: 0xEDECE7, trim: 0xBFC4CA },
@@ -25,7 +26,7 @@ const COLOURS = {
 
 let renderer;
 try {
-  renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer = new THREE.WebGLRenderer({ canvas, antialias: !mobile, alpha: true, powerPreference: 'low-power' });
 } catch (e) {
   renderer = null;
 }
@@ -34,7 +35,7 @@ if (renderer) init();
 
 function init() {
   explorer.classList.add('has-3d');
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(devicePixelRatio, mobile ? 1.5 : 2));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.05;
 
@@ -210,7 +211,7 @@ function init() {
   stx.fillStyle = sg; stx.fillRect(0, 0, 64, 64);
   const steamTex = new THREE.CanvasTexture(stc);
   const steam = [];
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < (mobile ? 8 : 16); i++) {
     const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: steamTex, transparent: true, opacity: 0, depthWrite: false }));
     s.userData.seed = Math.random();
     scene.add(s); steam.push(s);
@@ -294,7 +295,7 @@ function init() {
   controls.enableDamping = true;
   controls.minPolarAngle = 0.25;
   controls.maxPolarAngle = 1.42;
-  controls.autoRotate = !reduce;
+  controls.autoRotate = !reduce && !mobile;
   controls.autoRotateSpeed = 0.6;
   controls.target.set(2, 5, 0);
   canvas.style.touchAction = 'pan-y'; // let vertical swipes scroll the page

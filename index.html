@@ -24,7 +24,7 @@
 
 <header class="nav" id="nav">
   <a href="#top" class="nav__logo" aria-label="N'OVEEN home"><img src="assets/img/noveen-logo.png" alt="N'OVEEN" width="207" height="55"></a>
-  <a class="btn btn--small" href="#contact">Request partner offer</a>
+  <a class="btn btn--small" href="mailto:PARTNER_EMAIL?subject=Partner%20offer%20%E2%80%93%20N'OVEEN%20lunch%20box">Request partner offer</a>
 </header>
 
 <main id="top">
@@ -40,13 +40,13 @@
       <p class="hero__lead reveal-load" style="--d:3">Give your customers a hot meal anywhere on the road.</p>
       <p class="hero__sub reveal-load" style="--d:4">Electric lunch boxes made for road trips. Powered straight from the car. Easy to offer with every rental.</p>
       <div class="hero__actions reveal-load" style="--d:5">
-        <a class="btn" href="#contact">Request partner offer</a>
+        <a class="btn" href="mailto:PARTNER_EMAIL?subject=Partner%20offer%20%E2%80%93%20N'OVEEN%20lunch%20box">Request partner offer</a>
         <a class="btn btn--ghost" href="#how">See how it works</a>
       </div>
     </div>
 
     <figure class="hero__visual reveal-load" style="--d:2">
-      <!-- PLACEHOLDER: replace with Gimmie the Trip photo (lunch box in/next to the car, Icelandic road, 12V plug visible) -->
+      <!-- TODO: replace .scene with a real Iceland road-trip photo (car + lunch box / food / road) -->
       <div class="scene" aria-hidden="true">
         <svg class="scene__land" viewBox="0 0 600 520" preserveAspectRatio="xMidYMax slice">
           <defs>
@@ -59,12 +59,21 @@
           <path class="layer l1" d="M380 120 L405 152 L392 150 L380 162 L366 148 L356 150Z" fill="#eef3f7"/>
           <path class="layer l2" d="M0 360 L90 300 L170 330 L260 280 L350 330 L440 290 L520 320 L600 300 V520 H0Z" fill="#8ea7bf"/>
           <path class="layer l3" d="M0 420 Q150 380 300 400 T600 390 V520 H0Z" fill="#5d7b97"/>
-          <path class="layer l3 road" d="M250 520 Q300 450 330 420 Q345 405 360 400" fill="none" stroke="#eef3f7" stroke-width="3" stroke-dasharray="10 9"/>
+          <path class="layer l3" d="M20 520 Q120 450 190 412 Q215 400 240 396 L262 396 Q232 404 214 418 Q160 460 120 520Z" fill="#46627d"/>
+          <path class="layer l3 road" d="M70 520 Q140 455 200 414 Q222 402 250 397" fill="none" stroke="#eef3f7" stroke-width="2.5" stroke-dasharray="9 8"/>
+          <g class="layer l3"><g class="van" transform="translate(120 432)">
+            <rect x="0" y="0" width="62" height="26" rx="6" fill="#04419C"/>
+            <path d="M44 0h6l12 12v8H44z" fill="#0a5bc4"/>
+            <rect x="6" y="5" width="30" height="9" rx="2" fill="#cfdce8"/>
+            <path d="M46 4h4l8 8h-12z" fill="#cfdce8"/>
+            <rect x="-2" y="20" width="66" height="4" rx="2" fill="#0A1A33"/>
+            <circle cx="14" cy="27" r="6" fill="#0A1A33"/><circle cx="14" cy="27" r="2.4" fill="#cfdce8"/>
+            <circle cx="49" cy="27" r="6" fill="#0A1A33"/><circle cx="49" cy="27" r="2.4" fill="#cfdce8"/>
+          </g></g>
         </svg>
         <img class="scene__product" src="assets/img/meal.jpg" alt="" width="900" height="900">
         <span class="scene__chip"><span class="dot"></span>12 V · heating</span>
       </div>
-      <figcaption class="ph-note">Placeholder · Gimmie the Trip photo goes here</figcaption>
     </figure>
 
     <ul class="facts" aria-label="Key facts">
@@ -75,12 +84,39 @@
     </ul>
   </section>
 
-  <!-- 02 · VALUE -->
+  <!-- 02 · WHY RENTALS -->
+  <section class="why" id="why">
+    <div class="why__inner">
+      <div class="why__head reveal">
+        <p class="eyebrow">Why rentals</p>
+        <h2>Why add it to your fleet?</h2>
+      </div>
+      <ul class="why__list">
+        <li class="reveal">
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="9" width="34" height="32" rx="5"/><path d="M7 18h34M16 5v8M32 5v8M24 24v10M19 29h10"/></svg>
+          <h3>New rental extra</h3>
+          <p>Add another useful option to every booking.</p>
+        </li>
+        <li class="reveal">
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 26l9 9 19-21"/><circle cx="24" cy="24" r="19"/></svg>
+          <h3>Easy to operate</h3>
+          <p>Simple handover, easy cleaning and turnaround.</p>
+        </li>
+        <li class="reveal">
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 36l12-12 8 8 16-16"/><path d="M32 16h10v10"/></svg>
+          <h3>Additional revenue</h3>
+          <p>Rent it as an extra or include it in selected packages.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 03 · VALUE -->
   <section class="value section" id="value">
     <div class="value__intro reveal">
       <p class="eyebrow">Value for the rental</p>
       <h2>A simple extra your customers will actually use.</h2>
-      <p>Icelandic road trips mean long driving days and changing plans. A car-powered lunch box lets travellers heat a meal on the way and stop where the view is worth it.</p>
+      <p>Iceland means long driving days, changing plans and plenty of time on the road. A car-powered lunch box lets customers heat a meal while driving and stop wherever they want.</p>
     </div>
     <ul class="benefits">
       <li class="benefit reveal">
@@ -106,7 +142,7 @@
     </ul>
   </section>
 
-  <!-- 03 · HOW IT WORKS -->
+  <!-- 04 · HOW IT WORKS -->
   <section class="how section" id="how">
     <div class="how__head reveal">
       <p class="eyebrow">How it works</p>
@@ -129,7 +165,7 @@
     </div>
   </section>
 
-  <!-- 04 · BUSINESS MODELS -->
+  <!-- 05 · BUSINESS MODELS + CASE -->
   <section class="models section" id="models">
     <div class="models__head reveal">
       <p class="eyebrow">Business models</p>
@@ -157,13 +193,18 @@
         </div>
       </article>
     </div>
-    <p class="models__note reveal">A small investment. Depending on your rental price, a unit can pay for itself within a few rentals.</p>
+    <div class="case reveal">
+      <p class="case__kicker">Business case</p>
+      <p class="case__title">A small investment.<br>A new revenue stream.</p>
+      <p class="case__text">Depending on your rental price, a unit can pay for itself within a few rentals.</p>
+    </div>
   </section>
 
-  <!-- 05 · PRODUCT & COLOURS -->
-  <section class="product section" id="product">
+  <!-- 06 · PRODUCT (proof) -->
+  <section class="product" id="product">
+   <div class="product__inner">
     <div class="product__head reveal">
-      <p class="eyebrow">Product &amp; colours</p>
+      <p class="eyebrow">The product</p>
       <h2>Built for everyday use.</h2>
       <ul class="chips">
         <li>30-month warranty</li><li>12 / 24 / 230 V</li><li>60 W</li><li>Removable INOX container</li><li>Thermal bag included</li><li>Four colours</li>
@@ -233,16 +274,20 @@
               <li><img src="assets/img/cables.jpg" alt="" width="900" height="900">230 V power cable · 12 / 24 V car cable</li>
               <li><img src="assets/img/bag.jpg" alt="" width="900" height="900">Thermal bag</li>
             </ul>
-            <h4>Good to know</h4>
-            <ul class="small">
-              <li>Heating time depends on the meal and outside temperature. Cold Icelandic day or food from the fridge = give it a bit longer.</li>
-              <li>Keep the vent open while heating.</li>
-              <li>Never switch it on empty.</li>
-            </ul>
           </div>
         </div>
       </details>
     </div>
+
+    <div class="gtk reveal">
+      <h3>Good to know</h3>
+      <ul class="small">
+              <li>Heating time depends on the meal and outside temperature. Cold Icelandic day or food from the fridge = give it a bit longer.</li>
+              <li>Keep the vent open while heating.</li>
+              <li>Never switch it on empty.</li>
+            </ul>
+    </div>
+   </div>
   </section>
 
   <!-- FINAL CTA -->
