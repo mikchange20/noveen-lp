@@ -37,33 +37,8 @@
     </div>
 
     <figure class="hero__visual reveal-load" style="--d:2">
-      <!-- TODO: replace .scene with the Gimmie the Trip photo (lunch box + Icelandic landscape) -->
-      <div class="scene" aria-hidden="true">
-        <svg class="scene__land" viewBox="0 0 600 520" preserveAspectRatio="xMidYMax slice">
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#cfdce8"/><stop offset="1" stop-color="#f3f6f9"/>
-            </linearGradient>
-          </defs>
-          <rect width="600" height="520" fill="url(#sky)"/>
-          <path class="layer l1" d="M0 300 L70 230 L120 260 L190 170 L250 230 L310 200 L380 120 L450 210 L520 180 L600 240 V520 H0Z" fill="#b4c6d8"/>
-          <path class="layer l1" d="M380 120 L405 152 L392 150 L380 162 L366 148 L356 150Z" fill="#eef3f7"/>
-          <path class="layer l2" d="M0 360 L90 300 L170 330 L260 280 L350 330 L440 290 L520 320 L600 300 V520 H0Z" fill="#8ea7bf"/>
-          <path class="layer l3" d="M0 420 Q150 380 300 400 T600 390 V520 H0Z" fill="#5d7b97"/>
-          <path class="layer l3" d="M20 520 Q120 450 190 412 Q215 400 240 396 L262 396 Q232 404 214 418 Q160 460 120 520Z" fill="#46627d"/>
-          <path class="layer l3 road" d="M70 520 Q140 455 200 414 Q222 402 250 397" fill="none" stroke="#eef3f7" stroke-width="2.5" stroke-dasharray="9 8"/>
-          <g class="layer l3"><g class="van" transform="translate(120 432)">
-            <rect x="0" y="0" width="62" height="26" rx="6" fill="#04419C"/>
-            <path d="M44 0h6l12 12v8H44z" fill="#0a5bc4"/>
-            <rect x="6" y="5" width="30" height="9" rx="2" fill="#cfdce8"/>
-            <path d="M46 4h4l8 8h-12z" fill="#cfdce8"/>
-            <rect x="-2" y="20" width="66" height="4" rx="2" fill="#0A1A33"/>
-            <circle cx="14" cy="27" r="6" fill="#0A1A33"/><circle cx="14" cy="27" r="2.4" fill="#cfdce8"/>
-            <circle cx="49" cy="27" r="6" fill="#0A1A33"/><circle cx="49" cy="27" r="2.4" fill="#cfdce8"/>
-          </g></g>
-        </svg>
-        <img class="scene__product" src="assets/img/meal.jpg" alt="" width="900" height="900">
-        <span class="scene__chip"><span class="dot"></span>12 V · heating</span>
+      <div class="hero__photo">
+        <img src="assets/img/hero-iceland.jpg" alt="Traveller eating a hot meal from the lunch box next to her car on an Icelandic road" width="1080" height="1350" fetchpriority="high">
       </div>
     </figure>
   </section>
@@ -87,20 +62,20 @@
 
       <ul class="points">
         <li class="point reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="14" width="32" height="22" rx="6"/><circle cx="24" cy="25" r="5"/><path d="M24 36v6M18 6l-3 8M30 6l3 8"/></svg>
-          <div><h3>Plugs into 12V.</h3><p>The socket every car in your fleet already has.</p></div>
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 6v8M18 6v8M7 14h14v7a7 7 0 0 1-14 0z"/><path d="M14 28v6a8 8 0 0 0 16 0V20a6 6 0 0 1 12 0v22"/></svg>
+          <div><h3>Standard and car power supply</h3><p>230V and 12/24V cables included!</p></div>
         </li>
         <li class="point reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="27" r="15"/><path d="M24 27V18M20 6h8M24 6v6"/><path class="heat" d="M17 31c2-2 0-4 2-6M24 33c2-2 0-4 2-6"/></svg>
-          <div><h3>60°C in 20 minutes.</h3><p>Heats up while they drive.</p></div>
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M13 40c-4-5 4-9 0-15s4-10 0-17M24 40c-4-5 4-9 0-15s4-10 0-17M35 40c-4-5 4-9 0-15s4-10 0-17"/></svg>
+          <div><h3>Quickly heat up meals</h3><p>in a short time: 60°C in 20 minutes!</p></div>
         </li>
         <li class="point reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 20h34l-3 16a6 6 0 0 1-6 5H16a6 6 0 0 1-6-5z"/><path d="M4 20h40"/><path class="heat" d="M18 14c2-2 0-4 2-6M27 14c2-2 0-4 2-6"/></svg>
-          <div><h3>Stainless steel.</h3><p>Removable 1.1 L INOX container. Dishwasher safe.</p></div>
+          <span class="ico ico--text" aria-hidden="true">INOX</span>
+          <div><h3>Interior made of INOX steel</h3><p>Dishwasher safe</p></div>
         </li>
         <li class="point reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M9 18h30l-2 22H11z"/><path d="M17 18v-4a7 7 0 0 1 14 0v4"/><path d="M9 25h30"/></svg>
-          <div><h3>Bag included.</h3><p>Hand over one thing, not a tangle of cables.</p></div>
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 14h24l2 28H10z"/><path d="M18 14v-3a6 6 0 0 1 12 0v3"/><path class="heat" d="M24 23c3 3 4 5 4 8a4 4 0 0 1-8 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 0-7z"/></svg>
+          <div><h3>Thermal bag included</h3><p>It protects and maintains temperature. It also has a space for a drink or fruit.</p></div>
         </li>
       </ul>
     </div>
@@ -116,6 +91,21 @@
         <li><img src="assets/img/city.jpg" alt="" width="900" height="900"><span class="dot-c" style="--c:#2D5476"></span><b>City</b><small>LB745</small></li>
         <li><img src="assets/img/glamour.jpg" alt="" width="900" height="900"><span class="dot-c" style="--c:#E2B9B3"></span><b>Glamour</b><small>LB755</small></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- 2b · 5 STEPS (graphics from the N'OVEEN EN leaflet) -->
+  <section class="steps5" id="steps">
+    <div class="steps5__inner">
+      <h2 class="steps5__title reveal"><b>A hot meal</b> in 5 simple steps</h2>
+      <ol class="steps5__list">
+        <li class="reveal"><img src="assets/img/step-1.jpg" alt="Lunch box with a meal inside" width="500" height="400"><p>Place a meal <b>in the Lunch Box</b></p></li>
+        <li class="reveal"><img src="assets/img/step-2.jpg" alt="Lunch box packed in the thermal bag" width="500" height="400"><p>Pack it <b>in a thermal bag</b></p></li>
+        <li class="reveal"><img src="assets/img/step-3.jpg" alt="Lunch box connected to power" width="500" height="400"><p><b>Connect to power</b> anywhere</p></li>
+        <li class="reveal"><img src="assets/img/step-4.jpg" alt="Lunch box heating up" width="500" height="400"><p><b>Wait about 20 minutes</b></p></li>
+        <li class="reveal"><img src="assets/img/step-5.jpg" alt="Hot meal ready in the lunch box" width="500" height="400"><p>Your <b>warm and tasty meal</b> is ready!</p></li>
+      </ol>
+      <p class="steps5__note reveal">Thanks to the <b>standard 230V power supply</b> and <b>12/24V car power supply</b>, the device will work in all conditions!</p>
     </div>
   </section>
 
@@ -208,9 +198,8 @@
     <ul class="us__list">
       <li class="reveal">
         <svg class="info" viewBox="0 0 120 80" aria-hidden="true">
-          <path class="info__land" d="M14 40c4-12 16-20 26-22 6-8 18-10 26-6 10-6 24-4 32 4 10 2 16 10 14 18 4 8-2 16-12 18-6 8-20 10-30 6-10 6-26 4-34-4-12 0-20-6-22-14z"/>
-          <path class="info__pin" d="M70 14c-7 0-12 5-12 12 0 9 12 22 12 22s12-13 12-22c0-7-5-12-12-12z"/>
-          <circle cx="70" cy="26" r="4.5" fill="#fff"/>
+          <path class="info__land" d="M91.8 12.7L92.9 12.7L94.6 12.0L95.3 11.5L97.1 9.8L98.1 9.3L99.7 9.5L100.5 9.3L100.5 9.5L99.5 10.2L98.7 10.4L97.6 11.4L96.5 13.7L95.7 14.9L95.7 15.4L96.7 16.3L97.7 16.8L98.7 16.3L99.2 16.5L99.5 17.2L99.8 17.8L99.8 18.5L99.6 19.8L99.0 21.2L98.2 22.3L98.4 22.7L99.0 22.9L102.0 22.2L102.3 22.2L102.5 22.6L102.6 23.3L102.7 23.9L103.0 24.4L102.9 25.0L101.6 26.8L103.2 25.7L104.4 25.4L106.5 25.9L107.4 26.6L107.9 27.7L108.6 27.3L109.0 27.4L109.4 28.0L109.5 28.7L109.1 29.7L109.0 30.6L108.6 31.0L107.9 31.3L107.7 31.6L108.0 32.3L108.5 33.0L109.1 33.0L109.2 33.3L109.2 33.7L109.1 34.1L108.9 34.4L108.6 34.6L108.2 35.1L109.8 36.2L110.0 36.6L110.0 37.2L109.9 37.8L109.6 38.5L109.1 38.9L108.0 39.0L107.3 39.4L107.5 40.2L107.5 41.1L107.3 42.3L106.4 44.0L105.5 44.9L104.7 45.5L103.2 45.2L102.4 44.8L102.5 46.3L101.7 47.2L101.8 47.9L102.1 48.3L102.0 49.3L101.6 50.2L100.9 51.3L100.2 51.9L98.7 52.7L97.4 54.0L96.6 54.5L94.4 54.5L92.2 55.3L89.1 57.1L87.1 58.5L85.5 60.1L83.3 62.8L81.8 63.9L80.8 64.2L79.1 64.4L77.6 65.1L72.7 66.4L71.0 67.2L70.8 67.8L70.1 68.8L70.0 69.2L70.3 69.5L70.4 69.8L69.8 71.0L68.6 71.9L68.0 71.8L67.3 71.1L67.0 71.1L66.9 71.2L66.9 71.5L67.3 72.4L66.5 72.8L63.3 73.8L57.9 73.0L55.7 72.2L53.0 71.0L51.4 70.6L49.2 70.6L47.3 68.8L46.5 67.7L46.4 67.3L46.5 66.7L46.7 66.4L47.0 66.2L47.6 66.2L47.7 66.0L47.2 65.2L46.8 65.4L45.6 66.7L45.0 66.6L44.3 66.0L44.3 65.4L42.9 65.2L41.8 64.4L40.6 63.4L40.4 63.0L41.0 62.4L40.9 62.2L40.4 62.1L39.6 62.3L38.3 63.7L37.7 64.0L29.3 64.3L27.1 64.5L26.7 64.7L26.3 63.8L26.0 61.8L25.9 60.5L26.0 59.9L26.3 59.1L26.7 59.3L27.1 59.9L27.5 60.7L28.0 61.1L31.0 60.1L32.2 59.4L32.7 58.7L33.3 57.6L33.9 57.0L34.2 56.5L34.8 54.8L35.2 54.0L35.7 53.4L36.3 53.0L37.6 52.7L36.7 52.3L35.9 52.3L33.1 54.1L32.2 54.1L32.2 53.9L32.6 53.3L33.6 52.5L32.9 52.4L32.7 52.0L32.6 51.1L33.1 49.8L35.4 48.0L36.2 47.7L36.4 47.4L36.1 47.1L35.6 46.9L33.4 48.8L31.7 49.4L31.2 49.3L30.3 48.5L30.1 48.2L29.7 47.4L29.7 46.9L30.5 45.5L30.4 45.2L29.9 45.0L28.4 43.7L26.1 43.8L20.3 43.1L19.2 43.4L17.2 44.5L16.0 44.9L15.5 44.7L15.0 44.1L14.5 43.3L14.1 42.2L14.3 41.5L15.0 41.1L15.6 40.9L17.2 41.2L19.1 40.4L20.3 40.3L20.6 40.2L21.3 39.4L21.7 39.2L22.3 39.5L22.5 40.0L24.4 39.2L25.1 38.8L25.2 38.6L25.5 38.3L26.4 38.7L27.2 38.7L28.1 38.4L29.8 38.3L33.7 38.2L34.2 37.6L34.5 37.0L34.8 35.5L34.7 35.2L32.3 36.6L31.8 36.5L29.0 35.8L28.0 35.0L28.3 34.4L29.8 33.0L31.3 31.8L33.5 30.6L34.0 30.1L34.1 29.6L32.6 28.6L29.8 28.9L29.1 27.7L26.8 27.0L25.2 27.4L24.4 26.7L22.4 27.7L18.0 29.1L16.2 30.1L15.3 30.4L14.2 29.6L12.3 28.7L10.2 28.4L10.0 27.9L11.2 26.2L12.1 25.9L12.9 26.1L14.5 27.2L15.7 27.6L14.3 25.9L14.3 25.3L14.2 24.3L13.8 23.9L13.3 22.8L13.5 22.4L14.1 22.3L15.2 22.7L17.9 24.5L19.2 24.2L19.9 23.5L20.9 23.0L20.6 22.8L18.3 22.7L17.1 22.3L16.4 21.8L15.9 20.9L16.1 20.4L16.7 20.1L18.7 20.2L17.4 18.6L16.5 17.7L16.4 17.2L16.5 16.7L16.6 16.3L16.8 16.1L19.0 17.0L19.5 17.1L19.1 16.5L18.1 15.6L18.0 15.2L18.5 15.0L18.7 14.5L18.7 14.0L19.4 13.7L20.1 13.7L20.8 14.0L22.9 15.7L23.3 16.2L23.4 16.9L23.2 17.7L23.3 18.0L24.2 17.7L24.9 18.1L25.2 18.0L26.0 16.8L26.6 17.0L27.0 17.6L27.1 18.1L27.1 18.8L27.0 20.3L27.0 20.5L27.6 19.7L28.6 19.6L28.8 19.2L28.8 17.6L28.7 16.4L28.6 16.1L25.3 14.3L24.7 13.9L24.0 13.0L24.1 12.5L24.8 12.2L25.8 12.0L28.0 12.0L28.2 11.8L27.8 11.4L26.8 11.1L26.5 10.8L26.4 10.3L25.2 10.6L23.8 10.6L22.4 10.3L22.4 9.9L22.9 9.3L24.0 8.3L24.5 8.1L26.0 8.2L27.5 8.0L28.8 8.3L29.7 9.2L31.1 10.9L33.0 12.0L33.1 12.4L34.1 13.3L36.1 15.7L38.1 17.0L38.2 17.4L37.9 17.8L37.1 18.3L37.3 18.6L38.3 18.9L39.0 19.9L39.1 20.3L38.4 23.2L38.0 23.8L37.6 24.1L35.8 23.6L36.2 24.5L37.6 25.5L37.9 26.1L37.7 26.6L37.8 26.7L38.3 26.4L38.5 26.7L38.4 27.6L38.2 28.4L37.9 29.0L38.0 29.3L38.5 29.2L39.0 29.3L39.7 30.2L40.3 32.7L40.6 33.5L40.9 32.8L41.1 30.9L41.4 30.0L41.6 29.9L41.8 29.6L42.0 29.1L42.4 27.0L43.6 25.5L44.2 25.0L44.8 24.9L45.0 25.1L46.0 26.7L46.5 27.0L46.8 26.9L47.2 25.8L47.7 23.7L47.8 21.3L47.6 18.7L47.7 16.9L48.3 15.8L49.1 15.4L50.0 15.9L50.7 16.5L52.1 19.1L53.3 20.5L54.2 21.9L54.7 22.4L55.7 22.6L55.9 22.5L56.1 22.2L56.2 21.6L56.0 17.9L56.2 16.8L56.6 16.0L58.4 15.5L59.3 15.0L60.2 14.1L61.0 13.7L61.6 13.6L62.2 13.9L62.8 14.7L63.9 16.1L65.1 18.4L66.8 20.1L67.6 22.8L67.8 23.3L68.0 23.4L68.2 23.0L68.4 22.5L68.4 21.3L67.9 19.7L66.4 15.6L66.4 14.8L66.6 14.2L67.7 14.1L70.2 14.5L71.0 15.1L72.7 17.6L73.1 18.2L73.4 18.4L73.5 18.1L74.2 17.6L74.6 17.0L75.4 15.7L77.1 13.2L77.4 13.1L77.9 13.3L78.7 14.0L79.1 14.5L79.9 14.9L80.8 14.7L81.9 13.9L83.2 13.4L83.6 12.1L83.7 11.6L82.7 7.9L83.1 7.2L85.3 6.3L87.3 6.2L87.8 6.5L89.0 8.2L89.8 9.1L90.2 9.8L90.3 11.4L90.8 12.0L91.8 12.7Z"/>
+          <g transform="translate(33.2 57.7)"><g class="info__pin"><path d="M0 0c-5-6-9-10-9-15a9 9 0 0 1 18 0c0 5-4 9-9 15z"/><circle cx="0" cy="-15" r="3.4" fill="#fff"/></g></g>
         </svg>
         <strong>Local partner in Iceland.</strong> You order here, not from abroad.
       </li>
@@ -224,11 +213,7 @@
         <strong>Mix colours in one order:</strong> Pearl, Nature, City, Glamour.
       </li>
       <li class="reveal">
-        <svg class="info" viewBox="0 0 120 80" aria-hidden="true">
-          <rect class="info__lid" x="30" y="16" width="60" height="9" rx="4.5"/>
-          <path class="info__box" d="M28 34h64l-5 30a6 6 0 0 1-6 5H39a6 6 0 0 1-6-5z"/>
-          <path class="info__arrow" d="M100 20a22 22 0 0 1 0 34M100 54l-6-2M100 54l1-6"/>
-        </svg>
+        <div class="info info--photo"><img src="assets/img/layers.jpg" alt="" width="900" height="900"></div>
         <strong>Spare parts:</strong> containers and lids available separately.
       </li>
       <li class="reveal">
@@ -246,10 +231,10 @@
   <!-- 7 · CTA -->
   <section class="cta" id="contact">
     <div class="cta__inner reveal">
-      <h2>Take a few units for a test.</h2>
+      <h2>Take a few units <span class="hot-text">for a test.</span></h2>
       <p>Winter is quieter. The perfect time to go into the 2027 season with a new extra. We'll run the numbers for your fleet.</p>
       <!-- TODO: replace PARTNER_EMAIL and phone -->
-      <a class="btn btn--light" href="mailto:PARTNER_EMAIL?subject=Partner%20offer%20%E2%80%93%20N'OVEEN%20lunch%20box">Request partner offer</a>
+      <a class="btn btn--orange" href="mailto:PARTNER_EMAIL?subject=Partner%20offer%20%E2%80%93%20N'OVEEN%20lunch%20box">Request partner offer</a>
       <p class="cta__contact"><a href="mailto:PARTNER_EMAIL">PARTNER_EMAIL</a> · <a href="tel:+000000000">+354 000 0000</a></p>
     </div>
   </section>
