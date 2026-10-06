@@ -18,7 +18,7 @@
 
 <header class="nav" id="nav">
   <a href="#top" class="nav__logo" aria-label="N'OVEEN home"><img src="assets/img/noveen-logo.png" alt="N'OVEEN" width="207" height="55"></a>
-  <a class="btn btn--small" href="mailto:PARTNER_EMAIL?subject=Partner%20offer%20%E2%80%93%20N'OVEEN%20lunch%20box">Request partner offer</a>
+  <a class="btn btn--small" href="#partner-form" data-open-form>Request partner offer</a>
 </header>
 
 <main id="top">
@@ -32,7 +32,7 @@
       </h1>
       <p class="hero__sub reveal-load" style="--d:3">An electric lunch box powered from the car socket. A hot meal in 20 minutes, anywhere in Iceland. <strong>For you: a new extra that earns from the very first rental.</strong></p>
       <div class="hero__actions reveal-load" style="--d:4">
-        <a class="btn" href="mailto:PARTNER_EMAIL?subject=Partner%20offer%20%E2%80%93%20N'OVEEN%20lunch%20box">Request partner offer</a>
+        <a class="btn" href="#partner-form" data-open-form>Request partner offer</a>
       </div>
     </div>
 
@@ -246,7 +246,7 @@
       <h2>Take a few units <span class="hot-text">for a test.</span></h2>
       <p>Winter is quieter. The perfect time to go into the 2027 season with a new extra. We'll run the numbers for your fleet.</p>
       <!-- TODO: replace PARTNER_EMAIL and phone -->
-      <a class="btn btn--orange" href="mailto:PARTNER_EMAIL?subject=Partner%20offer%20%E2%80%93%20N'OVEEN%20lunch%20box">Request partner offer</a>
+      <a class="btn btn--orange" href="#partner-form" data-open-form>Request partner offer</a>
       <p class="cta__contact"><a href="mailto:PARTNER_EMAIL">PARTNER_EMAIL</a> · <a href="tel:+000000000">+354 000 0000</a></p>
     </div>
   </section>
@@ -273,6 +273,27 @@
   <p>N'OVEEN Lunchee electric lunch box · LB715 Pearl · LB725 Nature · LB745 City · LB755 Glamour</p>
 </footer>
 
+
+<dialog class="modal" id="partner-form" aria-labelledby="pf-title">
+  <form class="modal__box" name="partner-offer" method="post" action="/" data-netlify="true" netlify-honeypot="company-site">
+    <button type="button" class="modal__close" data-close-form aria-label="Close">&times;</button>
+    <h2 id="pf-title">Request partner offer</h2>
+    <p class="modal__lead">Tell us a little about your fleet. We'll come back with a partner offer.</p>
+    <input type="hidden" name="form-name" value="partner-offer">
+    <p class="modal__hp"><label>Leave empty <input name="company-site" tabindex="-1" autocomplete="off"></label></p>
+    <div class="modal__grid">
+      <label>Full name<input name="name" required autocomplete="name"></label>
+      <label>Company<input name="company" autocomplete="organization"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+      <label>Fleet size (vehicles)<input name="fleet" inputmode="numeric" placeholder="e.g. 120"></label>
+      <label>Units interested in<input name="quantity" inputmode="numeric" placeholder="e.g. 50"></label>
+    </div>
+    <label class="modal__full">Message<textarea name="message" rows="4"></textarea></label>
+    <p class="modal__status" role="status" aria-live="polite"></p>
+    <button type="submit" class="btn btn--orange">Send request</button>
+  </form>
+</dialog>
 <script src="js/main.js" defer></script>
 </body>
 </html>

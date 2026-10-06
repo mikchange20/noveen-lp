@@ -32,3 +32,27 @@
   addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
+
+// Partner offer modal
+(() => {
+  const dlg = document.getElementById('partner-form');
+  if (!dlg || !dlg.showModal) return;
+  const form = dlg.querySelector('form');
+  const status = dlg.querySelector('.modal__status');
+  document.querySelectorAll('[data-open-form]').forEach((a) => a.addEventListener('click', (e) => {
+    e.preventDefault(); status.textContent = ''; dlg.showModal();
+  }));
+  dlg.querySelector('[data-close-form]').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.classList.remove('is-error'); status.textContent = 'Sending...';
+    try {
+      const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() });
+      if (!r.ok) throw new Error(r.status);
+      form.reset(); status.textContent = 'Thank you! We will get back to you shortly.';
+    } catch (err) {
+      status.classList.add('is-error'); status.textContent = 'Something went wrong. Please try again.';
+    }
+  });
+})();
