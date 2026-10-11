@@ -499,7 +499,7 @@ th { font: 500 13px/1.4 var(--mono); color: var(--muted); width: 40%; padding-ri
 /* ---------- 5 steps (leaflet) ---------- */
 .steps5 { background: linear-gradient(160deg, #FCD62B 0%, #F8BC14 55%, #F4A20C 100%); padding: clamp(48px, 6vw, 80px) var(--gutter); overflow: hidden; }
 .steps5__inner { max-width: var(--max); margin: 0 auto; }
-.steps5__title { max-width: none; text-align: center; color: var(--navy); font-weight: 500; font-stretch: 100%; text-transform: uppercase; font-size: clamp(26px, 3.4vw, 44px); line-height: 1.1; }
+.steps5__title { max-width: none; text-align: center; color: var(--navy); font-weight: 500; font-stretch: 100%; text-transform: uppercase; font-size: clamp(32px, 5.4vw, 72px); line-height: 1.05; }
 .steps5__title b { display: block; font-weight: 900; font-stretch: 112%; }
 .steps5__list { margin-top: clamp(32px, 4vw, 56px); display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .steps5__list li { text-align: center; }
