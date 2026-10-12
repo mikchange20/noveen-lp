@@ -578,5 +578,4 @@ th { font: 500 13px/1.4 var(--mono); color: var(--muted); width: 40%; padding-ri
 .modal .btn { margin-top: 6px; }
 @media (max-width: 560px) { .modal__grid { grid-template-columns: 1fr; } }
 
-.hero__leader { margin-top: 18px; display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(255, 194, 26, .22); color: var(--navy); font: 600 15px/1.3 var(--body); }
-.what__leader { margin-top: 14px; font-size: 18px; color: var(--muted); max-width: 52ch; }
+.what__leader { margin-top: 16px; font: 700 clamp(19px, 2.4vw, 24px)/1.35 var(--body); color: var(--navy); max-width: 40ch; padding-left: 14px; border-left: 4px solid var(--heat-1); }
