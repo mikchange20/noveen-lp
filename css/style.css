@@ -579,3 +579,14 @@ th { font: 500 13px/1.4 var(--mono); color: var(--muted); width: 40%; padding-ri
 @media (max-width: 560px) { .modal__grid { grid-template-columns: 1fr; } }
 
 .what__leader { margin-top: 16px; font: 700 clamp(19px, 2.4vw, 24px)/1.35 var(--body); color: var(--navy); max-width: 40ch; padding-left: 14px; border-left: 4px solid var(--heat-1); }
+
+/* ---------- Language switch ---------- */
+.nav__right { display: flex; align-items: center; gap: 12px; }
+.lang { display: inline-flex; border: 1.5px solid var(--navy); border-radius: 999px; overflow: hidden; background: #fff; }
+.lang button { appearance: none; border: 0; background: transparent; color: var(--navy); font: 700 13px/1 var(--body); letter-spacing: .04em; padding: 9px 12px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+@media (max-width: 560px) {
+  .nav__right { gap: 8px; }
+  .lang button { padding: 8px 8px; font-size: 12px; }
+  .nav .btn--small { padding: 0 10px; font-size: 12px; line-height: 1.1; text-align: center; max-width: 112px; white-space: normal; }
+}

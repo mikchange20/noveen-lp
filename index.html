@@ -17,7 +17,13 @@
 
 <header class="nav" id="nav">
   <a href="#top" class="nav__logo" aria-label="N'OVEEN home"><img src="assets/img/noveen-logo.png" alt="N'OVEEN" width="207" height="55"></a>
-  <a class="btn btn--small" href="#partner-form" data-open-form>Request partner offer</a>
+  <div class="nav__right">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="pl" aria-pressed="false">PL</button>
+    </div>
+    <a class="btn btn--small" href="#partner-form" data-open-form>Request partner offer</a>
+  </div>
 </header>
 
 <main id="top">
@@ -295,5 +301,6 @@
   </form>
 </dialog>
 <script src="js/main.js" defer></script>
+<script src="js/i18n.js" defer></script>
 </body>
 </html>

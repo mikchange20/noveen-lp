@@ -46,13 +46,13 @@
   dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    status.classList.remove('is-error'); status.textContent = 'Sending...';
+    status.classList.remove('is-error'); status.textContent = (window.noveenMsg || {}).sending || 'Sending...';
     try {
       const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() });
       if (!r.ok) throw new Error(r.status);
-      form.reset(); status.textContent = 'Thank you! We will get back to you shortly.';
+      form.reset(); status.textContent = (window.noveenMsg || {}).ok || 'Thank you! We will get back to you shortly.';
     } catch (err) {
-      status.classList.add('is-error'); status.textContent = 'Something went wrong. Please try again.';
+      status.classList.add('is-error'); status.textContent = (window.noveenMsg || {}).err || 'Something went wrong. Please try again.';
     }
   });
 })();
