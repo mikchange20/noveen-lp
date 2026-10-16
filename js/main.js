@@ -48,8 +48,10 @@
     e.preventDefault();
     status.classList.remove('is-error'); status.textContent = (window.noveenMsg || {}).sending || 'Sending...';
     try {
-      const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() });
-      if (!r.ok) throw new Error(r.status);
+      // FormSubmit (GitHub Pages has no form backend); first request triggers an activation email to the recipient
+      const r = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok || String(data.success) === 'false') throw new Error(data.message || r.status);
       form.reset(); status.textContent = (window.noveenMsg || {}).ok || 'Thank you! We will get back to you shortly.';
     } catch (err) {
       status.classList.add('is-error'); status.textContent = (window.noveenMsg || {}).err || 'Something went wrong. Please try again.';

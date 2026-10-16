@@ -281,12 +281,13 @@
 
 
 <dialog class="modal" id="partner-form" aria-labelledby="pf-title">
-  <form class="modal__box" name="partner-offer" method="post" action="/" data-netlify="true" netlify-honeypot="company-site">
+  <form class="modal__box" name="partner-offer" method="post" action="https://formsubmit.co/mikolaj.chrustowski@gmail.com">
     <button type="button" class="modal__close" data-close-form aria-label="Close">&times;</button>
     <h2 id="pf-title">Request partner offer</h2>
     <p class="modal__lead">Tell us a little about your fleet. We'll come back with a partner offer.</p>
-    <input type="hidden" name="form-name" value="partner-offer">
-    <p class="modal__hp"><label>Leave empty <input name="company-site" tabindex="-1" autocomplete="off"></label></p>
+    <input type="hidden" name="_subject" value="N'OVEEN Iceland: new partner offer request">
+    <input type="hidden" name="_template" value="table">
+    <p class="modal__hp"><label>Leave empty <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
     <div class="modal__grid">
       <label>Full name<input name="name" required autocomplete="name"></label>
       <label>Company<input name="company" autocomplete="organization"></label>
