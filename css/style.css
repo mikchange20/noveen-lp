@@ -560,9 +560,9 @@ th { font: 500 13px/1.4 var(--mono); color: var(--muted); width: 40%; padding-ri
 }
 
 /* ---------- Partner offer modal ---------- */
-.modal { border: 0; padding: 0; background: transparent; max-width: min(640px, calc(100vw - 24px)); width: 100%; max-height: calc(100vh - 24px); overflow: visible; margin: auto; }
+.modal { border: 0; padding: 0; background: transparent; max-width: min(640px, calc(100vw - 24px)); width: 100%; max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); overflow: visible; margin: auto; }
 .modal::backdrop { background: rgba(4, 65, 156, .35); backdrop-filter: blur(3px); }
-.modal__box { position: relative; background: #fff; border-radius: 28px; padding: clamp(22px, 4vw, 36px); max-height: calc(100vh - 24px); overflow: auto; box-shadow: 0 30px 80px -30px rgba(4, 65, 156, .55); }
+.modal__box { position: relative; background: #fff; border-radius: 28px; padding: clamp(22px, 4vw, 36px); max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; box-shadow: 0 30px 80px -30px rgba(4, 65, 156, .55); }
 .modal__box h2 { color: var(--navy); font-weight: 800; font-size: clamp(24px, 3vw, 32px); padding-right: 40px; }
 .modal__lead { margin-top: 6px; color: var(--muted); }
 .modal__close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--glacier); color: var(--navy); font-size: 26px; line-height: 1; cursor: pointer; }
@@ -576,7 +576,22 @@ th { font: 500 13px/1.4 var(--mono); color: var(--muted); width: 40%; padding-ri
 .modal__status { min-height: 22px; margin-top: 12px; color: var(--navy); font-weight: 600; }
 .modal__status.is-error { color: #B3261E; }
 .modal .btn { margin-top: 6px; }
-@media (max-width: 560px) { .modal__grid { grid-template-columns: 1fr; } }
+body:has(dialog.modal[open]) { overflow: hidden; }
+.modal .btn[type="submit"] { position: sticky; bottom: 0; }
+@media (max-width: 560px) {
+  .modal { max-width: calc(100vw - 16px); max-height: calc(100vh - 16px); max-height: calc(100dvh - 16px); }
+  .modal__box { max-height: calc(100vh - 16px); max-height: calc(100dvh - 16px); padding: 18px 16px 0; border-radius: 22px; }
+  .modal__box h2 { font-size: 22px; padding-right: 48px; }
+  .modal__lead { font-size: 14px; }
+  .modal__grid { grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+  .modal__grid label:nth-child(-n+4) { grid-column: 1 / -1; }
+  .modal label { font-size: 13px; gap: 4px; }
+  .modal input, .modal textarea { padding: 10px 12px; }
+  .modal textarea { height: 76px; }
+  .modal__full { margin-top: 10px; }
+  .modal__status { min-height: 18px; margin-top: 8px; }
+  .modal .btn[type="submit"] { width: 100%; justify-content: center; margin: 0 0 calc(12px + env(safe-area-inset-bottom)); box-shadow: 0 -10px 16px -6px #fff; }
+}
 
 .what__leader { margin-top: 16px; font: 700 clamp(19px, 2.4vw, 24px)/1.35 var(--body); color: var(--navy); max-width: 40ch; padding-left: 14px; border-left: 4px solid var(--heat-1); }
 
