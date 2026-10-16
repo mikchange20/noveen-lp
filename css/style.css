@@ -605,3 +605,6 @@ body:has(dialog.modal[open]) { overflow: hidden; }
   .lang button { padding: 8px 8px; font-size: 12px; }
   .nav .btn--small { padding: 0 10px; font-size: 12px; line-height: 1.1; text-align: center; max-width: 112px; white-space: normal; }
 }
+
+/* "What it is - in 10 seconds." stays on one line */
+.what__head h2 { white-space: nowrap; font-size: min(clamp(30px, 4.4vw, 54px), 5.5vw); }
