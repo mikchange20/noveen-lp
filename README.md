@@ -56,3 +56,6 @@ git push
 ```
 
 Postęp publikacji: zakładka **Actions** w repozytorium na GitHubie.
+
+Po zmianie plików w `v2/css` lub `v2/js` podbij numer `?v=...` przy ich linkach w `v2/index.html`,
+żeby przeglądarki nie składały nowej strony ze starych plików z pamięci.

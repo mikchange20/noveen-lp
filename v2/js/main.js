@@ -45,7 +45,10 @@
 
   let lang = 'en';
   let aud = 'rentals';
-  const t = () => Object.assign({}, COPY.en[aud], (COPY[lang] || {})[aud]);
+  const t = () => {
+    if (!COPY.en[aud]) aud = 'rentals'; // never break the page if an audience has no copy (e.g. stale cached script)
+    return Object.assign({}, COPY.en[aud], (COPY[lang] || {})[aud]);
+  };
   const ui = () => Object.assign({}, COPY.en.ui, (COPY[lang] || {}).ui);
 
   // ---------- Dynamic sections ----------
