@@ -101,7 +101,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 20px; line-height
 }
 .hero__title {
   font-family: var(--display); font-weight: 900;
-  font-size: clamp(40px, 5vw, 66px); line-height: 1; letter-spacing: -0.03em; color: var(--navy);
+  font-size: clamp(38px, 10vw, 56px); line-height: 1; letter-spacing: -0.03em; color: var(--navy);
 }
 .hero__title .line { display: block; }
 .hero__title .line--hot { margin-top: .12em; color: var(--ink); }
@@ -116,6 +116,9 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 20px; line-height
 .facts b { font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--ink); white-space: nowrap; }
 @media (min-width: 960px) {
   .hero { grid-template-columns: 1.15fr 1fr; column-gap: clamp(28px, 4vw, 64px); row-gap: 20px; padding-top: 48px; }
+  /* exactly two lines next to the photo, like v1 */
+  .hero__title { font-size: clamp(36px, 4vw, 54px); }
+  .hero__title .line { white-space: nowrap; }
   .hero__photo { aspect-ratio: 4 / 4.4; max-height: 76vh; margin-left: auto; }
   .facts { grid-column: 1 / -1; grid-template-columns: repeat(4, 1fr); }
   .facts b { font-size: 22px; }
