@@ -6,11 +6,11 @@
 <title>Lunchee Iceland – a hot meal anywhere you drive</title>
 <meta name="description" content="An electric lunch box that runs on your car's 12V or 24V socket. Hot food in about 20 minutes – for car rentals, work crews, drivers and stores in Iceland.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#141472">
+<meta name="theme-color" content="#04419C">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500..900&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,14 +33,18 @@
   <!-- 2 · HERO (shared) -->
   <section class="hero">
     <div class="hero__copy">
-      <h1 data-i18n="hero.h">A hot meal anywhere you&nbsp;drive.</h1>
-      <p class="hero__sub" data-i18n="hero.sub">An electric lunch box that runs on your car's 12V or 24V socket. Hot food in about 20&nbsp;minutes – on the road, on site, between rides.</p>
+      <h1 class="hero__title">
+        <span class="line reveal-load" style="--d:1" data-i18n="hero.h1">A hot meal</span>
+        <span class="line line--hot reveal-load" style="--d:2" data-i18n="hero.h2">anywhere you&nbsp;drive.</span>
+      </h1>
+      <p class="hero__sub reveal-load" style="--d:3" data-i18n="hero.sub">An electric lunch box that runs on your car's 12V or 24V socket. Hot food in about 20&nbsp;minutes – <strong>on the road, on site, between rides.</strong></p>
+      <div class="hero__actions reveal-load" style="--d:4"><a class="btn" href="#contact" data-cta>Request partner offer</a></div>
     </div>
-    <figure class="hero__photo">
+    <figure class="hero__photo reveal-load" style="--d:2">
       <!-- Gimmie the Trip expedition photo -->
       <img src="assets/img/hero-iceland.jpg" alt="Traveller eating a hot meal from the lunch box next to her car on an Icelandic road" data-i18n-alt="hero.alt" width="1080" height="1350" fetchpriority="high">
     </figure>
-    <ul class="stats">
+    <ul class="facts reveal-load" style="--d:5">
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><b>12 / 24 V</b><span data-i18n="stats.1">car powered</span></li>
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><b>~20 min</b><span data-i18n="stats.2">to a hot meal</span></li>
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b data-i18n="stats.3b">Thermal bag</b><span data-i18n="stats.3">included</span></li>
@@ -50,6 +54,7 @@
 
   <!-- 3 · WHO ARE YOU? (shared) -->
   <section class="who" id="who" aria-labelledby="who-h">
+    <p class="eyebrow" data-i18n="who.eyebrow">One lunch box, four ways to use it</p>
     <h2 id="who-h" data-i18n="who.h">Who are you?</h2>
     <div class="tiles" role="group" aria-labelledby="who-h">
       <a class="tile" href="rentals" data-aud="rentals" aria-pressed="true">
@@ -72,7 +77,7 @@
   </section>
 
   <!-- 4 · WHY IT'S FOR YOU (dynamic) -->
-  <section class="why section" id="why" data-dyn="why" aria-live="polite"></section>
+  <section class="why" id="why"><div class="why__inner" data-dyn="why" aria-live="polite"></div></section>
 
   <!-- 5 · HOW YOU USE IT (dynamic) -->
   <section class="how section" id="how" data-dyn="how"></section>
@@ -80,10 +85,11 @@
   <!-- 6 · PRODUCT (shared) -->
   <section class="product" id="product">
     <div class="product__inner">
-      <h2 data-i18n="product.h">One box. Everything in it.</h2>
+      <p class="eyebrow reveal" data-i18n="product.eyebrow">Lunchee – electric lunch box</p>
+      <h2 class="reveal" data-i18n="product.h">One box. Everything in it.</h2>
 
       <!-- TODO: swap for one packshot of the whole kit (open box with food + thermal bag + cables + cutlery) when available -->
-      <figure class="kit">
+      <figure class="kit reveal">
         <img class="kit__main" src="assets/img/meal.jpg" alt="Open lunch box with a hot meal" data-i18n-alt="product.alt" width="900" height="900">
         <figcaption class="kit__parts">
           <span><img src="assets/img/bag.jpg" alt="" width="900" height="900"><i data-i18n="kit.bag">Thermal bag</i></span>
@@ -92,7 +98,7 @@
         </figcaption>
       </figure>
 
-      <div class="colours">
+      <div class="colours reveal">
         <p data-i18n="colours.p">Four colours, same specification. <b>Mix colours in one order.</b></p>
         <ul>
           <li><img src="assets/img/pearl.jpg" alt="" width="900" height="900"><b>Pearl</b><small>LB715</small></li>
@@ -102,16 +108,27 @@
         </ul>
       </div>
 
-      <h3 class="steps__h" data-i18n="steps.h">A hot meal in 5 steps</h3>
-      <ol class="steps">
-        <li><img src="assets/img/step-1.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.1">Prepare</b><span data-i18n="steps.1s">Put the meal in the lunch box.</span></li>
-        <li><img src="assets/img/step-2.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.2">Pack</b><span data-i18n="steps.2s">Place it in the thermal bag.</span></li>
-        <li><img src="assets/img/step-3.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.3">Plug in</b><span data-i18n="steps.3s">12V / 24V in the vehicle or 230V.</span></li>
-        <li><img src="assets/img/step-4.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.4">Wait ~20 min</b><span data-i18n="steps.4s">It heats while you drive or work.</span></li>
-        <li><img src="assets/img/step-5.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.5">Eat</b><span data-i18n="steps.5s">Wherever you stop.</span></li>
+    </div>
+  </section>
+
+  <!-- 6b · 5 STEPS (graphics from the N'OVEEN leaflet) -->
+  <section class="steps5" id="steps">
+    <div class="steps5__inner">
+      <h2 class="steps5__title reveal" data-i18n="steps.h"><b>A hot meal</b> in 5 steps</h2>
+      <ol class="steps5__list">
+        <li class="reveal"><img src="assets/img/step-1.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.1">Prepare</b><span data-i18n="steps.1s">Put the meal in the lunch box.</span></li>
+        <li class="reveal"><img src="assets/img/step-2.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.2">Pack</b><span data-i18n="steps.2s">Place it in the thermal bag.</span></li>
+        <li class="reveal"><img src="assets/img/step-3.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.3">Plug in</b><span data-i18n="steps.3s">12V / 24V in the vehicle or 230V.</span></li>
+        <li class="reveal"><img src="assets/img/step-4.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.4">Wait ~20 min</b><span data-i18n="steps.4s">It heats while you drive or work.</span></li>
+        <li class="reveal"><img src="assets/img/step-5.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.5">Eat</b><span data-i18n="steps.5s">Wherever you stop.</span></li>
       </ol>
 
-      <details class="specs">
+    </div>
+  </section>
+
+  <!-- 6c · SPECS -->
+  <section class="specs-wrap">
+      <details class="specs reveal">
         <summary data-i18n="specs.h">Specs</summary>
         <div class="specs__body">
           <table>
@@ -135,17 +152,16 @@
           </div>
         </div>
       </details>
-    </div>
   </section>
 
   <!-- 7 · QUESTIONS (dynamic) -->
-  <section class="faq section" id="faq" data-dyn="faq"></section>
+  <section class="faq" id="faq"><div class="faq__inner" data-dyn="faq"></div></section>
 
   <!-- 8 · CTA + FORM (dynamic heading + extra fields) -->
   <section class="cta" id="contact">
     <div class="cta__inner">
-      <div class="cta__copy" data-dyn="cta"></div>
-      <form class="form" name="lunchee-offer" method="post" action="https://formsubmit.co/mikolaj.chrustowski@gmail.com">
+      <div class="cta__copy reveal" data-dyn="cta"></div>
+      <form class="form reveal" name="lunchee-offer" method="post" action="https://formsubmit.co/mikolaj.chrustowski@gmail.com">
         <input type="hidden" name="segment" value="rentals">
         <input type="hidden" name="_subject" value="Lunchee Iceland: new offer request (rentals)">
         <input type="hidden" name="_template" value="table">
@@ -159,7 +175,7 @@
         <div class="form__grid form__extra" data-dyn="fields"></div>
         <label class="form__full"><span data-ui="message">Message</span><textarea name="message" rows="3"></textarea></label>
         <p class="form__status" role="status" aria-live="polite"></p>
-        <button type="submit" class="btn btn--accent btn--block" data-submit>Request partner offer</button>
+        <button type="submit" class="btn btn--block" data-submit>Request partner offer</button>
       </form>
     </div>
   </section>

@@ -33,55 +33,63 @@
   const COLOURS = [['pearl', 'Pearl'], ['nature', 'Nature'], ['city', 'City'], ['glamour', 'Glamour']];
   const placeholder = (label, ui) => `<figure class="ph" role="img" aria-label="${ui.placeholder}: ${label}">${icon('camera')}<b>${ui.placeholder}</b><span>${label}</span></figure>`;
 
+  // Scroll reveal. After a tile/language swap the new content shows at once (the person is already looking at it).
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let swapping = false;
+  const io = 'IntersectionObserver' in window && !reduce ? new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }) : null;
+  const watchReveals = () => $$('.reveal:not(.is-in)').forEach((el) => {
+    if (io && !(swapping && el.closest('[data-dyn]'))) io.observe(el); else el.classList.add('is-in');
+  });
+
   let lang = 'en';
   let aud = 'rentals';
   const t = () => Object.assign({}, COPY.en[aud], (COPY[lang] || {})[aud]);
   const ui = () => Object.assign({}, COPY.en.ui, (COPY[lang] || {}).ui);
 
   // ---------- Dynamic sections ----------
+  const mock = (m) => `<div class="mock" aria-hidden="true"><p class="mock__title">${m.title}</p>
+    ${m.rows.map((r, i) => `<p class="mock__row mock__row--${m.type}${i === m.rows.length - 1 ? ' is-on' : ''}"><span class="box"></span>${r}</p>`).join('')}</div>`;
+
   const renderHow = (h, u) => {
     let body = '';
     if (h.kind === 'rentals') {
-      body = `<div class="how__grid">${h.cards.map((c) => `
-        <article class="card">
-          <h3>${c.h}</h3><p>${c.p}</p>
-          <div class="mock" aria-hidden="true"><p class="mock__title">${c.mock.title}</p>
-            ${c.mock.rows.map((r, i) => `<p class="mock__row mock__row--${c.mock.type}${i === c.mock.rows.length - 1 ? ' is-on' : ''}"><span class="box"></span>${r}</p>`).join('')}
-          </div>
-        </article>`).join('')}</div>`;
+      body = `<div class="models__grid">${h.cards.map((c) => `
+        <article class="model-card reveal"><h3>${c.h}</h3><p>${c.p}</p>${mock(c.mock)}</article>`).join('')}</div>`;
     } else if (h.kind === 'crews') {
-      body = `<div class="how__grid">
-        <div class="card">
+      body = `<div class="models__grid">
+        <article class="model-card reveal">
           <ol class="timeline">${h.timeline.map(([time, txt], i) => `<li${i === h.timeline.length - 1 ? ' class="is-on"' : ''}><b>${time}</b><span>${txt}</span></li>`).join('')}</ol>
-          <p class="how__p">${h.p}</p>
+          <p>${h.p}</p>
           <ul class="names" aria-hidden="true">${COLOURS.map(([f], i) => `<li><img src="assets/img/${f}.jpg" alt="" width="900" height="900" loading="lazy"><span>${h.names[i]}</span></li>`).join('')}</ul>
-        </div>
+        </article>
         ${placeholder(h.photo, u)}
       </div>`;
     } else if (h.kind === 'drivers') {
-      body = `<div class="how__grid how__grid--3">${h.cards.map(([ic, ttl, p]) => `
-        <article class="card card--icon">${icon(ic)}<h3>${ttl}</h3><p>${p}</p></article>`).join('')}</div>
+      body = `<div class="models__grid models__grid--3">${h.cards.map(([ic, ttl, p]) => `
+        <article class="model-card reveal">${icon(ic)}<h3>${ttl}</h3><p>${p}</p></article>`).join('')}</div>
         ${placeholder(h.photo, u)}`;
     } else if (h.kind === 'stores') {
-      body = `<div class="how__grid">
-        <div class="card"><p class="mock__title">${h.shelf}</p>
-          <div class="shelf" aria-hidden="true">
+      body = `<div class="models__grid">
+        <article class="model-card reveal"><h3>${h.shelf}</h3>
+          <div class="mock shelf" aria-hidden="true">
             <span class="shelf__tag">${h.badge} · Lunchee</span>
             <div class="shelf__row">${COLOURS.map(([f]) => `<img src="assets/img/${f}.jpg" alt="" width="900" height="900" loading="lazy">`).join('')}</div>
             <div class="shelf__plank"></div>
           </div>
-        </div>
-        <div class="card"><p class="mock__title">${h.online}</p>
-          <div class="shop" aria-hidden="true">
+        </article>
+        <article class="model-card reveal"><h3>${h.online}</h3>
+          <div class="mock shop" aria-hidden="true">
             <div class="shop__img"><img src="assets/img/city.jpg" alt="" width="900" height="900" loading="lazy"><span class="shop__badge">${h.badge}</span></div>
             <div class="shop__info"><b>${h.product}</b><small>${h.productSub}</small>
               <span class="shop__dots">${COLOURS.map(([f]) => `<i class="dot dot--${f}"></i>`).join('')}</span>
               <span class="shop__stock">${h.stock}</span></div>
           </div>
-        </div>
+        </article>
       </div>`;
     }
-    return `<h2>${h.h}</h2>${body}`;
+    return `<div class="how__head reveal"><h2>${h.h}</h2></div>${body}`;
   };
 
   const renderField = (f) => {
@@ -96,13 +104,14 @@
   const render = () => {
     const c = t();
     const u = ui();
+    const tile = $(`.tile[data-aud="${aud}"] b`);
 
     $('[data-dyn="why"]').innerHTML = `
-      <h2>${c.why.h}</h2><p class="lead">${c.why.lead}</p>
-      <ul class="benefits">${c.why.items.map(([ic, h, p]) => `<li>${icon(ic)}<div><h3>${h}</h3><p>${p}</p></div></li>`).join('')}</ul>`;
+      <div class="why__head reveal"><p class="eyebrow">${tile ? tile.textContent : ''}</p><h2>${c.why.h}</h2><p class="lead">${c.why.lead}</p></div>
+      <ul class="why__list">${c.why.items.map(([ic, h, p]) => `<li class="reveal">${icon(ic)}<h3>${h}</h3><p>${p}</p></li>`).join('')}</ul>`;
     $('[data-dyn="how"]').innerHTML = renderHow(c.how, u);
-    $('[data-dyn="faq"]').innerHTML = `<h2>${u.faq}</h2>
-      <div class="qa-list">${c.faq.map(([q, a]) => `<details class="qa"><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>`;
+    $('[data-dyn="faq"]').innerHTML = `<div class="faq__head reveal"><h2>${u.faq}</h2></div>
+      <div class="faq__list reveal">${c.faq.map(([q, a]) => `<details class="qa"><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>`;
     $('[data-dyn="cta"]').innerHTML = `<h2>${c.form.h}</h2><p>${c.form.lead}</p>`;
 
     // Form: keep what the person already typed in the shared fields, swap only the audience-specific ones
@@ -118,6 +127,7 @@
     $$('.tile').forEach((el) => el.setAttribute('aria-pressed', String(el.dataset.aud === aud)));
     document.title = `${c.title} – ${u.tagline}`;
     document.documentElement.dataset.aud = aud;
+    watchReveals();
   };
 
   // ---------- Routing: /rentals, /crews, /drivers, /stores (stub folders redirect to ?for=…) ----------
@@ -144,7 +154,9 @@
     if (el.dataset.aud === aud) return;
     aud = el.dataset.aud;
     document.body.classList.add('is-swapping');
+    swapping = true;
     render();
+    swapping = false;
     setUrl();
     requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.remove('is-swapping')));
   }));
@@ -170,8 +182,12 @@
     $$('.lang button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === l)));
     try { localStorage.setItem('lunchee-lang', l); } catch (e) { /* storage blocked */ }
     applyShared();
+    swapping = started;
     render();
+    swapping = false;
+    started = true;
   };
+  let started = false;
   $$('.lang button').forEach((b) => {
     if (!ready(b.dataset.lang)) b.hidden = true;
     b.addEventListener('click', () => setLang(b.dataset.lang));
@@ -184,7 +200,7 @@
   // ---------- Header CTA → form ----------
   $$('[data-cta]').forEach((a) => a.addEventListener('click', (e) => {
     e.preventDefault();
-    $('#contact').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    $('#contact').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
     setTimeout(() => $('.form [name="name"]').focus({ preventScroll: true }), 600);
   }));
 

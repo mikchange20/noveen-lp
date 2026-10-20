@@ -8,7 +8,7 @@ window.LUNCHEE_COPY = {
       err: 'Something went wrong. Please try again or email us.',
       name: 'Full name', company: 'Company', email: 'Email', phone: 'Phone', message: 'Message',
       placeholder: 'Photo coming soon',
-      faq: 'Questions',
+      faq: 'Questions you probably have.',
       tagline: 'a hot meal anywhere you drive'
     },
     rentals: {
@@ -172,7 +172,7 @@ window.LUNCHEE_COPY = {
       err: 'Coś poszło nie tak. Spróbuj ponownie albo napisz do nas maila.',
       name: 'Imię i nazwisko', company: 'Firma', email: 'E-mail', phone: 'Telefon', message: 'Wiadomość',
       placeholder: 'Zdjęcie wkrótce',
-      faq: 'Pytania',
+      faq: 'Pytania, które pewnie masz.',
       tagline: 'ciepły posiłek, gdziekolwiek jedziesz'
     },
     rentals: {
@@ -337,8 +337,9 @@ window.LUNCHEE_COPY = {
 // a missing key keeps the English text.
 window.LUNCHEE_SHARED = {
   pl: {
-    'hero.h': 'Ciepły posiłek, gdziekolwiek&nbsp;jedziesz.',
-    'hero.sub': 'Elektryczny lunchbox zasilany z gniazda 12V lub 24V w samochodzie. Ciepłe jedzenie w około 20&nbsp;minut – w trasie, na budowie, między kursami.',
+    'hero.h1': 'Ciepły posiłek,',
+    'hero.h2': 'gdziekolwiek&nbsp;jedziesz.',
+    'hero.sub': 'Elektryczny lunchbox zasilany z gniazda 12V lub 24V w samochodzie. Ciepłe jedzenie w około 20&nbsp;minut – <strong>w trasie, na budowie, między kursami.</strong>',
     'hero.alt': 'Podróżniczka je ciepły posiłek z lunchboxa obok samochodu na islandzkiej drodze',
     'stats.1': 'zasilanie z auta',
     'stats.2': 'do ciepłego posiłku',
@@ -346,6 +347,7 @@ window.LUNCHEE_SHARED = {
     'stats.3': 'w zestawie',
     'stats.4b': '30 miesięcy',
     'stats.4': 'gwarancji',
+    'who.eyebrow': 'Jeden lunchbox, cztery zastosowania',
     'who.h': 'Kim jesteś?',
     'who.rentals': 'Wypożyczalnie aut',
     'who.rentals.s': 'Nowy dodatek do każdej rezerwacji',
@@ -355,13 +357,14 @@ window.LUNCHEE_SHARED = {
     'who.drivers.s': 'Prawdziwy posiłek między kursami',
     'who.stores': 'Sklepy',
     'who.stores.s': 'Produkt, którego potrzebują Islandczycy',
+    'product.eyebrow': 'Lunchee – elektryczny lunchbox',
     'product.h': 'Jedno pudełko. Wszystko w środku.',
     'product.alt': 'Otwarty lunchbox z ciepłym posiłkiem',
     'kit.bag': 'Torba termiczna',
     'kit.cables': 'Kable 12/24 V + 230 V',
     'kit.inox': 'Pojemnik INOX 1,1 L',
     'colours.p': 'Cztery kolory, ta sama specyfikacja. <b>Mieszaj kolory w jednym zamówieniu.</b>',
-    'steps.h': 'Ciepły posiłek w 5 krokach',
+    'steps.h': '<b>Ciepły posiłek</b> w 5 krokach',
     'steps.1': 'Przygotuj', 'steps.1s': 'Włóż posiłek do lunchboxa.',
     'steps.2': 'Spakuj', 'steps.2s': 'Włóż go do torby termicznej.',
     'steps.3': 'Podłącz', 'steps.3s': '12V / 24V w pojeździe albo 230V.',
