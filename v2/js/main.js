@@ -1,15 +1,14 @@
 (() => {
   const COPY = window.LUNCHEE_COPY;
   const AUDS = ['rentals', 'crews', 'drivers', 'stores'];
-  const LANGS = ['en', 'is'];
+  const LANGS = ['en', 'pl', 'is'];
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
-  // Icelandic strings for the shared (static) sections, keyed by data-i18n. English lives in the HTML.
-  // Fill in after the native check; a missing key keeps the English text.
-  const SHARED = { is: {} };
+  // Translations of the shared (static) sections, keyed by data-i18n (see content.js). English lives in the HTML.
+  const SHARED = window.LUNCHEE_SHARED || {};
 
-  // A language counts as ready once it has any copy; until then its button stays disabled.
+  // A language counts as ready once it has any copy; until then its button stays hidden.
   const ready = (l) => l === 'en' || Object.keys(SHARED[l] || {}).length > 0 || Object.keys(COPY[l] || {}).length > 0;
 
   // Outline icons (24×24, stroke = currentColor)
@@ -117,7 +116,7 @@
 
     $$('[data-cta]').forEach((a) => { a.textContent = c.cta; });
     $$('.tile').forEach((el) => el.setAttribute('aria-pressed', String(el.dataset.aud === aud)));
-    document.title = `${c.title} – a hot meal anywhere you drive`;
+    document.title = `${c.title} – ${u.tagline}`;
     document.documentElement.dataset.aud = aud;
   };
 
@@ -174,12 +173,13 @@
     render();
   };
   $$('.lang button').forEach((b) => {
-    if (!ready(b.dataset.lang)) { b.disabled = true; b.title = 'Íslenska – kemur fljótlega'; }
+    if (!ready(b.dataset.lang)) b.hidden = true;
     b.addEventListener('click', () => setLang(b.dataset.lang));
   });
   let saved = null;
   try { saved = localStorage.getItem('lunchee-lang'); } catch (e) { /* storage blocked */ }
-  setLang(saved || 'en');
+  // ?lang=pl in a link wins over the remembered choice
+  setLang(new URLSearchParams(location.search).get('lang') || saved || 'en');
 
   // ---------- Header CTA → form ----------
   $$('[data-cta]').forEach((a) => a.addEventListener('click', (e) => {

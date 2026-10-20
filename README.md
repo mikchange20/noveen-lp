@@ -25,7 +25,9 @@ Jedna strona, 4 wersje dla różnych odbiorców – każda ma swój adres:
 - Teksty wspólne są w `v2/index.html`, teksty 4 wersji (sekcje: Why, How, Questions, formularz) w `v2/js/content.js`.
 - Kolory i czcionka – na górze `v2/css/style.css` (zmienne `--navy`, `--accent`, `--font`).
 - Formularz wysyła ukryte pole `segment` (rentals / crews / drivers / stores).
-- Wersja IS: przycisk jest, ale nieaktywny, dopóki nie dodamy tłumaczeń (`LUNCHEE_COPY.is` w `content.js` i `SHARED.is` w `main.js`).
+- Języki: EN i PL (przełącznik w nagłówku; link z `?lang=pl` otwiera od razu po polsku, np. `.../v2/crews?lang=pl`).
+  Wszystkie teksty PL są w `v2/js/content.js` (`LUNCHEE_COPY.pl` – 4 wersje, `LUNCHEE_SHARED.pl` – część wspólna).
+- Wersja IS: przycisk pojawi się sam, gdy dodamy tłumaczenia (`LUNCHEE_COPY.is` i `LUNCHEE_SHARED.is` w `content.js`).
 
 Oryginał, którego link poszedł mailem do firmy, jest na koncie Natalii:
 https://nataliajagus.github.io/noveen-lp/ – tego repozytorium nie ruszamy.
