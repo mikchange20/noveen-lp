@@ -2,306 +2,177 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>N'OVEEN Lunch Box for car rentals</title>
-<meta name="description" content="Your customers eat on the road anyway. Let them pay you for it. A car-powered electric lunch box for rental fleets in Iceland.">
-<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lunchee Iceland – a hot meal anywhere you drive</title>
+<meta name="description" content="An electric lunch box that runs on your car's 12V or 24V socket. Hot food in about 20 minutes – for car rentals, work crews, drivers and stores in Iceland.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141472">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500..900&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-
+<!-- 1 · HEADER -->
 <header class="nav" id="nav">
-  <a href="#top" class="nav__logo" aria-label="N'OVEEN home"><img src="assets/img/noveen-logo.png" alt="N'OVEEN" width="207" height="55"></a>
+  <a href="#top" class="nav__logo" aria-label="Lunchee – top of page"><img src="assets/img/lunchee-logo-black.png" alt="Lunchee" width="600" height="135"></a>
   <div class="nav__right">
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
-      <button type="button" data-lang="pl" aria-pressed="false">PL</button>
+      <button type="button" data-lang="is" aria-pressed="false">IS</button>
     </div>
-    <a class="btn btn--small" href="#partner-form" data-open-form>Request partner offer</a>
+    <a class="btn btn--small" href="#contact" data-cta>Request partner offer</a>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- 1 · HERO -->
+  <!-- 2 · HERO (shared) -->
   <section class="hero">
     <div class="hero__copy">
-      <h1 class="hero__title">
-        <span class="line reveal-load" style="--d:1">Your customers eat on the road anyway.</span>
-        <span class="line line--hot reveal-load" style="--d:2"><span class="hot">Let them pay you for&nbsp;it.</span></span>
-      </h1>
-      <p class="hero__sub reveal-load" style="--d:3">An electric lunch box powered from the car socket. A hot meal in 20 minutes, anywhere in Iceland. <strong>For you: a new extra that earns from the very first rental.</strong></p>
-      <div class="hero__actions reveal-load" style="--d:4">
-        <a class="btn" href="#partner-form" data-open-form>Request partner offer</a>
-      </div>
+      <h1 data-i18n="hero.h">A hot meal anywhere you&nbsp;drive.</h1>
+      <p class="hero__sub" data-i18n="hero.sub">An electric lunch box that runs on your car's 12V or 24V socket. Hot food in about 20&nbsp;minutes – on the road, on site, between rides.</p>
     </div>
-
-    <figure class="hero__visual reveal-load" style="--d:2">
-      <div class="hero__photo">
-        <img src="assets/img/hero-iceland.jpg" alt="Traveller eating a hot meal from the lunch box next to her car on an Icelandic road" width="1080" height="1350" fetchpriority="high">
-      </div>
+    <figure class="hero__photo">
+      <!-- Gimmie the Trip expedition photo -->
+      <img src="assets/img/hero-iceland.jpg" alt="Traveller eating a hot meal from the lunch box next to her car on an Icelandic road" data-i18n-alt="hero.alt" width="1080" height="1350" fetchpriority="high">
     </figure>
-  </section>
-
-  <!-- 2 · WHAT IT IS -->
-  <section class="what section" id="what">
-    <div class="what__head reveal">
-      <p class="eyebrow">Lunchee - electric lunch box</p>
-      <h2>What it is – in 10&nbsp;seconds.</h2>
-      <p class="what__leader">Lunchee is the leader of the Polish market in electric lunch boxes.</p>
-    </div>
-
-    <div class="what__grid">
-      <!-- TODO: swap for one packshot of the full set (box + bag + cables + cutlery) when available -->
-      <figure class="what__product reveal">
-        <img src="assets/img/meal.jpg" alt="Open lunch box with a hot meal" width="900" height="900">
-        <figcaption class="kit">
-          <span><img src="assets/img/bag.jpg" alt="" width="900" height="900">Thermal bag</span>
-          <span><img src="assets/img/cables.jpg" alt="" width="900" height="900">12/24 V + 230 V cables</span>
-          <span><img src="assets/img/inox.jpg" alt="" width="900" height="900">1.1 L INOX container</span>
-        </figcaption>
-      </figure>
-
-      <ul class="points">
-        <li class="point reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 6v8M18 6v8M7 14h14v7a7 7 0 0 1-14 0z"/><path d="M14 28v6a8 8 0 0 0 16 0V20a6 6 0 0 1 12 0v22"/></svg>
-          <div><h3>Standard and car power supply</h3><p>230V and 12/24V cables included!</p></div>
-        </li>
-        <li class="point reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M13 40c-4-5 4-9 0-15s4-10 0-17M24 40c-4-5 4-9 0-15s4-10 0-17M35 40c-4-5 4-9 0-15s4-10 0-17"/></svg>
-          <div><h3>Quickly heat up meals</h3><p>in a short time: 60°C in 20 minutes!</p></div>
-        </li>
-        <li class="point reveal">
-          <span class="ico ico--text" aria-hidden="true">INOX</span>
-          <div><h3>Interior made of INOX steel</h3><p>Dishwasher safe</p></div>
-        </li>
-        <li class="point reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 14h24l2 28H10z"/><path d="M18 14v-3a6 6 0 0 1 12 0v3"/><path class="heat" d="M24 23c3 3 4 5 4 8a4 4 0 0 1-8 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 0-7z"/></svg>
-          <div><h3>Thermal bag included</h3><p>It protects and maintains temperature. It also has a space for a drink or fruit.</p></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="colours reveal">
-      <div class="colours__head">
-        <h3>Choose from 4 colours.</h3>
-        <p>Same specs in every colour. Mix them in one order.</p>
-      </div>
-      <ul class="colours__list">
-        <li><img src="assets/img/pearl.jpg" alt="" width="900" height="900"><span class="dot-c" style="--c:#EDECE7"></span><b>Pearl</b><small>LB715</small></li>
-        <li><img src="assets/img/nature.jpg" alt="" width="900" height="900"><span class="dot-c" style="--c:#8BAE9A"></span><b>Nature</b><small>LB725</small></li>
-        <li><img src="assets/img/city.jpg" alt="" width="900" height="900"><span class="dot-c" style="--c:#2D5476"></span><b>City</b><small>LB745</small></li>
-        <li><img src="assets/img/glamour.jpg" alt="" width="900" height="900"><span class="dot-c" style="--c:#E2B9B3"></span><b>Glamour</b><small>LB755</small></li>
-      </ul>
-    </div>
-    <details class="specs specs--inline reveal">
-      <summary>Full device specifications</summary>
-      <div class="specs__grid">
-        <table>
-          <tbody>
-            <tr><th>Power</th><td>12 V car / 24 V truck / 230 V mains</td></tr>
-            <tr><th>Wattage</th><td>60 W</td></tr>
-            <tr><th>Heating</th><td>Up to 60°C in about 20 min</td></tr>
-            <tr><th>Main container</th><td>1.1 L INOX, removable</td></tr>
-            <tr><th>Extra container</th><td>0.5 L with lid</td></tr>
-            <tr><th>Dimensions</th><td>23 × 16 × 10.5 cm</td></tr>
-            <tr><th>Weight</th><td>0.63 kg</td></tr>
-            <tr><th>Materials</th><td>BPA-free</td></tr>
-            <tr><th>Dishwasher</th><td>Containers dishwasher safe</td></tr>
-          </tbody>
-        </table>
-        <div>
-          <h4>In the box</h4>
-          <ul class="inbox">
-            <li><img src="assets/img/inox.jpg" alt="" width="900" height="900">Lunch box with 1.1 L INOX container</li>
-            <li><img src="assets/img/layers.jpg" alt="" width="900" height="900">0.5 L container with lid</li>
-            <li><span class="inbox__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 3v7a2 2 0 0 1-2 2v9M6 3v6M4 3v6a2 2 0 0 0 2 3"/><ellipse cx="17" cy="7" rx="3" ry="4"/><path d="M17 11v10"/></svg></span>Metal spoon and fork</li>
-            <li><img src="assets/img/cables.jpg" alt="" width="900" height="900">230 V cable · 12/24 V car cable</li>
-            <li><img src="assets/img/bag.jpg" alt="" width="900" height="900">Thermal bag</li>
-          </ul>
-        </div>
-      </div>
-    </details>
-  </section>
-
-  <!-- 2b · 5 STEPS (graphics from the N'OVEEN EN leaflet) -->
-  <section class="steps5" id="steps">
-    <div class="steps5__inner">
-      <h2 class="steps5__title reveal"><b>A hot meal</b> in 5 simple steps</h2>
-      <ol class="steps5__list">
-        <li class="reveal"><img src="assets/img/step-1.jpg" alt="Lunch box with a meal inside" width="500" height="400"><p>Place a meal <b>in the Lunch Box</b></p></li>
-        <li class="reveal"><img src="assets/img/step-2.jpg" alt="Lunch box packed in the thermal bag" width="500" height="400"><p>Pack it <b>in a thermal bag</b></p></li>
-        <li class="reveal"><img src="assets/img/step-3.jpg" alt="Lunch box connected to power" width="500" height="400"><p><b>Connect to power</b> anywhere</p></li>
-        <li class="reveal"><img src="assets/img/step-4.jpg" alt="Lunch box heating up" width="500" height="400"><p><b>Wait about 20 minutes</b></p></li>
-        <li class="reveal"><img src="assets/img/step-5.jpg" alt="Hot meal ready in the lunch box" width="500" height="400"><p>Your <b>warm and tasty meal</b> is ready!</p></li>
-      </ol>
-      <p class="steps5__note reveal">Thanks to the <b>standard 230V power supply</b> and <b>12/24V car power supply</b>, the device will work in all conditions!</p>
-    </div>
-  </section>
-
-  <!-- 3 · WHY IT PAYS OFF -->
-  <section class="why" id="why">
-    <div class="why__inner">
-      <div class="why__head reveal">
-        <h2>Why it pays off.</h2>
-      </div>
-      <ul class="why__list">
-        <li class="reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 36l12-12 8 8 16-16"/><path d="M32 16h10v10"/></svg>
-          <h3>Small investment, quick payback.</h3>
-          <p>It earns every time it goes out with a car.</p>
-        </li>
-        <li class="reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 30v-6l6-9h22l9 9h1a2 2 0 0 1 2 2v4z"/><circle cx="14" cy="32" r="4"/><circle cx="35" cy="32" r="4"/><path d="M24 5v8M20 9h8"/></svg>
-          <h3>New revenue, no new car.</h3>
-          <p>Add one line to your extras list. Same fleet, more money.</p>
-        </li>
-        <li class="reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 26l9 9 19-21"/><circle cx="24" cy="24" r="19"/></svg>
-          <h3>Zero setup.</h3>
-          <p>No installation. No training. The 12V socket is already in the car.</p>
-        </li>
-        <li class="reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5l5.6 11.6 12.8 1.8-9.3 9 2.3 12.6L24 34l-11.4 6 2.3-12.6-9.3-9 12.8-1.8z"/></svg>
-          <h3>Better reviews.</h3>
-          <p>Customers forget which car they drove. They remember a hot lunch by a waterfall. And they write about it.</p>
-        </li>
-        <li class="reveal">
-          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M15 7h18v10a9 9 0 0 1-18 0z"/><path d="M15 10H8a7 7 0 0 0 7 9M33 10h7a7 7 0 0 1-7 9M24 26v8M16 41h16M19 34h10v7H19z"/></svg>
-          <h3>Stand out.</h3>
-          <p>Everyone offers a child seat and Wi-Fi. A hot lunch in the car tells customers you're different.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 4 · TWO WAYS TO MAKE MONEY -->
-  <section class="models section" id="models">
-    <div class="models__head reveal">
-      <h2>Two ways to make money with it.</h2>
-    </div>
-    <div class="models__grid">
-      <article class="model-card reveal">
-        <h3>Rent it as an extra.</h3>
-        <p>Next to the child seat and Wi-Fi. Customers tick it when they book. Charge per day or per rental – your call.</p>
-        <div class="mock" aria-hidden="true">
-          <p class="mock__title">Extras for your trip</p>
-          <label class="mock__row"><span class="box"></span>Child seat</label>
-          <label class="mock__row"><span class="box"></span>Wi-Fi hotspot</label>
-          <label class="mock__row mock__row--on"><span class="box"></span>Car-powered lunch box <em>+ thermal bag</em></label>
-        </div>
-      </article>
-      <article class="model-card reveal">
-        <h3>Include it in premium packages.</h3>
-        <p>Camper, 4x4, all-inclusive. Raise the value of the package – and its price.</p>
-        <div class="mock" aria-hidden="true">
-          <p class="mock__title">Camper package includes</p>
-          <p class="mock__line">Bedding &amp; kitchen kit</p>
-          <p class="mock__line">Unlimited mileage</p>
-          <p class="mock__line mock__line--on">Car-powered lunch box</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- 6 · WHY ORDER THROUGH US -->
-  <section class="us section" id="us">
-    <div class="us__head reveal">
-      <h2>Why order through us.</h2>
-    </div>
-    <ul class="us__list">
-      <li class="reveal">
-        <svg class="info" viewBox="0 0 120 80" aria-hidden="true">
-          <path class="info__land" d="M91.8 12.7L92.9 12.7L94.6 12.0L95.3 11.5L97.1 9.8L98.1 9.3L99.7 9.5L100.5 9.3L100.5 9.5L99.5 10.2L98.7 10.4L97.6 11.4L96.5 13.7L95.7 14.9L95.7 15.4L96.7 16.3L97.7 16.8L98.7 16.3L99.2 16.5L99.5 17.2L99.8 17.8L99.8 18.5L99.6 19.8L99.0 21.2L98.2 22.3L98.4 22.7L99.0 22.9L102.0 22.2L102.3 22.2L102.5 22.6L102.6 23.3L102.7 23.9L103.0 24.4L102.9 25.0L101.6 26.8L103.2 25.7L104.4 25.4L106.5 25.9L107.4 26.6L107.9 27.7L108.6 27.3L109.0 27.4L109.4 28.0L109.5 28.7L109.1 29.7L109.0 30.6L108.6 31.0L107.9 31.3L107.7 31.6L108.0 32.3L108.5 33.0L109.1 33.0L109.2 33.3L109.2 33.7L109.1 34.1L108.9 34.4L108.6 34.6L108.2 35.1L109.8 36.2L110.0 36.6L110.0 37.2L109.9 37.8L109.6 38.5L109.1 38.9L108.0 39.0L107.3 39.4L107.5 40.2L107.5 41.1L107.3 42.3L106.4 44.0L105.5 44.9L104.7 45.5L103.2 45.2L102.4 44.8L102.5 46.3L101.7 47.2L101.8 47.9L102.1 48.3L102.0 49.3L101.6 50.2L100.9 51.3L100.2 51.9L98.7 52.7L97.4 54.0L96.6 54.5L94.4 54.5L92.2 55.3L89.1 57.1L87.1 58.5L85.5 60.1L83.3 62.8L81.8 63.9L80.8 64.2L79.1 64.4L77.6 65.1L72.7 66.4L71.0 67.2L70.8 67.8L70.1 68.8L70.0 69.2L70.3 69.5L70.4 69.8L69.8 71.0L68.6 71.9L68.0 71.8L67.3 71.1L67.0 71.1L66.9 71.2L66.9 71.5L67.3 72.4L66.5 72.8L63.3 73.8L57.9 73.0L55.7 72.2L53.0 71.0L51.4 70.6L49.2 70.6L47.3 68.8L46.5 67.7L46.4 67.3L46.5 66.7L46.7 66.4L47.0 66.2L47.6 66.2L47.7 66.0L47.2 65.2L46.8 65.4L45.6 66.7L45.0 66.6L44.3 66.0L44.3 65.4L42.9 65.2L41.8 64.4L40.6 63.4L40.4 63.0L41.0 62.4L40.9 62.2L40.4 62.1L39.6 62.3L38.3 63.7L37.7 64.0L29.3 64.3L27.1 64.5L26.7 64.7L26.3 63.8L26.0 61.8L25.9 60.5L26.0 59.9L26.3 59.1L26.7 59.3L27.1 59.9L27.5 60.7L28.0 61.1L31.0 60.1L32.2 59.4L32.7 58.7L33.3 57.6L33.9 57.0L34.2 56.5L34.8 54.8L35.2 54.0L35.7 53.4L36.3 53.0L37.6 52.7L36.7 52.3L35.9 52.3L33.1 54.1L32.2 54.1L32.2 53.9L32.6 53.3L33.6 52.5L32.9 52.4L32.7 52.0L32.6 51.1L33.1 49.8L35.4 48.0L36.2 47.7L36.4 47.4L36.1 47.1L35.6 46.9L33.4 48.8L31.7 49.4L31.2 49.3L30.3 48.5L30.1 48.2L29.7 47.4L29.7 46.9L30.5 45.5L30.4 45.2L29.9 45.0L28.4 43.7L26.1 43.8L20.3 43.1L19.2 43.4L17.2 44.5L16.0 44.9L15.5 44.7L15.0 44.1L14.5 43.3L14.1 42.2L14.3 41.5L15.0 41.1L15.6 40.9L17.2 41.2L19.1 40.4L20.3 40.3L20.6 40.2L21.3 39.4L21.7 39.2L22.3 39.5L22.5 40.0L24.4 39.2L25.1 38.8L25.2 38.6L25.5 38.3L26.4 38.7L27.2 38.7L28.1 38.4L29.8 38.3L33.7 38.2L34.2 37.6L34.5 37.0L34.8 35.5L34.7 35.2L32.3 36.6L31.8 36.5L29.0 35.8L28.0 35.0L28.3 34.4L29.8 33.0L31.3 31.8L33.5 30.6L34.0 30.1L34.1 29.6L32.6 28.6L29.8 28.9L29.1 27.7L26.8 27.0L25.2 27.4L24.4 26.7L22.4 27.7L18.0 29.1L16.2 30.1L15.3 30.4L14.2 29.6L12.3 28.7L10.2 28.4L10.0 27.9L11.2 26.2L12.1 25.9L12.9 26.1L14.5 27.2L15.7 27.6L14.3 25.9L14.3 25.3L14.2 24.3L13.8 23.9L13.3 22.8L13.5 22.4L14.1 22.3L15.2 22.7L17.9 24.5L19.2 24.2L19.9 23.5L20.9 23.0L20.6 22.8L18.3 22.7L17.1 22.3L16.4 21.8L15.9 20.9L16.1 20.4L16.7 20.1L18.7 20.2L17.4 18.6L16.5 17.7L16.4 17.2L16.5 16.7L16.6 16.3L16.8 16.1L19.0 17.0L19.5 17.1L19.1 16.5L18.1 15.6L18.0 15.2L18.5 15.0L18.7 14.5L18.7 14.0L19.4 13.7L20.1 13.7L20.8 14.0L22.9 15.7L23.3 16.2L23.4 16.9L23.2 17.7L23.3 18.0L24.2 17.7L24.9 18.1L25.2 18.0L26.0 16.8L26.6 17.0L27.0 17.6L27.1 18.1L27.1 18.8L27.0 20.3L27.0 20.5L27.6 19.7L28.6 19.6L28.8 19.2L28.8 17.6L28.7 16.4L28.6 16.1L25.3 14.3L24.7 13.9L24.0 13.0L24.1 12.5L24.8 12.2L25.8 12.0L28.0 12.0L28.2 11.8L27.8 11.4L26.8 11.1L26.5 10.8L26.4 10.3L25.2 10.6L23.8 10.6L22.4 10.3L22.4 9.9L22.9 9.3L24.0 8.3L24.5 8.1L26.0 8.2L27.5 8.0L28.8 8.3L29.7 9.2L31.1 10.9L33.0 12.0L33.1 12.4L34.1 13.3L36.1 15.7L38.1 17.0L38.2 17.4L37.9 17.8L37.1 18.3L37.3 18.6L38.3 18.9L39.0 19.9L39.1 20.3L38.4 23.2L38.0 23.8L37.6 24.1L35.8 23.6L36.2 24.5L37.6 25.5L37.9 26.1L37.7 26.6L37.8 26.7L38.3 26.4L38.5 26.7L38.4 27.6L38.2 28.4L37.9 29.0L38.0 29.3L38.5 29.2L39.0 29.3L39.7 30.2L40.3 32.7L40.6 33.5L40.9 32.8L41.1 30.9L41.4 30.0L41.6 29.9L41.8 29.6L42.0 29.1L42.4 27.0L43.6 25.5L44.2 25.0L44.8 24.9L45.0 25.1L46.0 26.7L46.5 27.0L46.8 26.9L47.2 25.8L47.7 23.7L47.8 21.3L47.6 18.7L47.7 16.9L48.3 15.8L49.1 15.4L50.0 15.9L50.7 16.5L52.1 19.1L53.3 20.5L54.2 21.9L54.7 22.4L55.7 22.6L55.9 22.5L56.1 22.2L56.2 21.6L56.0 17.9L56.2 16.8L56.6 16.0L58.4 15.5L59.3 15.0L60.2 14.1L61.0 13.7L61.6 13.6L62.2 13.9L62.8 14.7L63.9 16.1L65.1 18.4L66.8 20.1L67.6 22.8L67.8 23.3L68.0 23.4L68.2 23.0L68.4 22.5L68.4 21.3L67.9 19.7L66.4 15.6L66.4 14.8L66.6 14.2L67.7 14.1L70.2 14.5L71.0 15.1L72.7 17.6L73.1 18.2L73.4 18.4L73.5 18.1L74.2 17.6L74.6 17.0L75.4 15.7L77.1 13.2L77.4 13.1L77.9 13.3L78.7 14.0L79.1 14.5L79.9 14.9L80.8 14.7L81.9 13.9L83.2 13.4L83.6 12.1L83.7 11.6L82.7 7.9L83.1 7.2L85.3 6.3L87.3 6.2L87.8 6.5L89.0 8.2L89.8 9.1L90.2 9.8L90.3 11.4L90.8 12.0L91.8 12.7Z"/>
-          <g transform="translate(33.2 57.7)"><g class="info__pin"><path d="M0 0c-5-6-9-10-9-15a9 9 0 0 1 18 0c0 5-4 9-9 15z"/><circle cx="0" cy="-15" r="3.4" fill="#fff"/></g></g>
-        </svg>
-        <strong>Local partner in Iceland.</strong> You order here, not from abroad.
-      </li>
-      <li class="reveal">
-        <svg class="info" viewBox="0 0 120 80" aria-hidden="true">
-          <circle cx="30" cy="40" r="16" fill="#EDECE7" stroke="#C9CDD2" stroke-width="2"/>
-          <circle cx="50" cy="40" r="16" fill="#8BAE9A"/>
-          <circle cx="70" cy="40" r="16" fill="#2D5476"/>
-          <circle cx="90" cy="40" r="16" fill="#E2B9B3"/>
-        </svg>
-        <strong>Mix colours in one order:</strong> Pearl, Nature, City, Glamour.
-      </li>
-      <li class="reveal">
-        <div class="info info--photo"><img src="assets/img/layers.jpg" alt="" width="900" height="900"></div>
-        <strong>Spare parts:</strong> containers and lids available separately.
-      </li>
-      <li class="reveal">
-        <svg class="info" viewBox="0 0 120 80" aria-hidden="true">
-          <rect class="info__bar" x="22" y="56" width="14" height="14" rx="3"/>
-          <rect class="info__bar" x="44" y="44" width="14" height="26" rx="3"/>
-          <rect class="info__bar" x="66" y="30" width="14" height="40" rx="3"/>
-          <rect class="info__bar info__bar--hot" x="88" y="12" width="14" height="58" rx="3"/>
-        </svg>
-        <strong>Start small.</strong> Test it on your customers, then scale up.
-      </li>
+    <ul class="stats">
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><b>12 / 24 V</b><span data-i18n="stats.1">car powered</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><b>~20 min</b><span data-i18n="stats.2">to a hot meal</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b data-i18n="stats.3b">Thermal bag</b><span data-i18n="stats.3">included</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><b data-i18n="stats.4b">30-month</b><span data-i18n="stats.4">warranty</span></li>
     </ul>
   </section>
 
-  <!-- 7 · CTA -->
-  <section class="cta" id="contact">
-    <div class="cta__inner reveal">
-      <h2>Take a few units <span class="hot-text">for a test.</span></h2>
-      <p>Winter is quieter. The perfect time to go into the 2027 season with a new extra. We'll run the numbers for your fleet.</p>
-      <a class="btn btn--orange" href="#partner-form" data-open-form>Request partner offer</a>
-      <p class="cta__contact"><a href="mailto:mikolaj.chrustowski@gmail.com">mikolaj.chrustowski@gmail.com</a><br><a href="tel:+3547825558">+354 782 5558</a></p>
+  <!-- 3 · WHO ARE YOU? (shared) -->
+  <section class="who" id="who" aria-labelledby="who-h">
+    <h2 id="who-h" data-i18n="who.h">Who are you?</h2>
+    <div class="tiles" role="group" aria-labelledby="who-h">
+      <a class="tile" href="rentals" data-aud="rentals" aria-pressed="true">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16v-4l2-5h14l2 5v4z"/><path d="M3 12h18"/><circle cx="7.5" cy="16.5" r="2"/><circle cx="16.5" cy="16.5" r="2"/></svg>
+        <b data-i18n="who.rentals">Car rentals</b><span data-i18n="who.rentals.s">Add a new extra to every booking</span>
+      </a>
+      <a class="tile" href="crews" data-aud="crews" aria-pressed="false">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4l4 17H6z"/><path d="M8 11h8M7 15.5h10M3 20h18"/></svg>
+        <b data-i18n="who.crews">Work crews</b><span data-i18n="who.crews.s">Hot lunch on site</span>
+      </a>
+      <a class="tile" href="drivers" data-aud="drivers" aria-pressed="false">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="15" rx="2"/><path d="M4 11h16M8 7h8"/><circle cx="8" cy="14.5" r="1"/><circle cx="16" cy="14.5" r="1"/><path d="M6.5 18v2.5M17.5 18v2.5"/></svg>
+        <b data-i18n="who.drivers">Drivers &amp; fleets</b><span data-i18n="who.drivers.s">A real meal between rides</span>
+      </a>
+      <a class="tile" href="stores" data-aud="stores" aria-pressed="false">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9 5 4h14l2 5"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 11.5V20h14v-8.5M10 20v-5h4v5"/></svg>
+        <b data-i18n="who.stores">Stores</b><span data-i18n="who.stores.s">Stock a product Icelanders need</span>
+      </a>
     </div>
   </section>
 
-  <!-- FAQ (collapsible, at the end) -->
-  <section class="faq" id="faq">
-    <div class="faq__inner">
-      <div class="faq__head reveal">
-        <h2>Questions you probably have.</h2>
+  <!-- 4 · WHY IT'S FOR YOU (dynamic) -->
+  <section class="why section" id="why" data-dyn="why" aria-live="polite"></section>
+
+  <!-- 5 · HOW YOU USE IT (dynamic) -->
+  <section class="how section" id="how" data-dyn="how"></section>
+
+  <!-- 6 · PRODUCT (shared) -->
+  <section class="product" id="product">
+    <div class="product__inner">
+      <h2 data-i18n="product.h">One box. Everything in it.</h2>
+
+      <!-- TODO: swap for one packshot of the whole kit (open box with food + thermal bag + cables + cutlery) when available -->
+      <figure class="kit">
+        <img class="kit__main" src="assets/img/meal.jpg" alt="Open lunch box with a hot meal" data-i18n-alt="product.alt" width="900" height="900">
+        <figcaption class="kit__parts">
+          <span><img src="assets/img/bag.jpg" alt="" width="900" height="900"><i data-i18n="kit.bag">Thermal bag</i></span>
+          <span><img src="assets/img/cables.jpg" alt="" width="900" height="900"><i data-i18n="kit.cables">12/24 V + 230 V cables</i></span>
+          <span><img src="assets/img/inox.jpg" alt="" width="900" height="900"><i data-i18n="kit.inox">1.1 L INOX container</i></span>
+        </figcaption>
+      </figure>
+
+      <div class="colours">
+        <p data-i18n="colours.p">Four colours, same specification. <b>Mix colours in one order.</b></p>
+        <ul>
+          <li><img src="assets/img/pearl.jpg" alt="" width="900" height="900"><b>Pearl</b><small>LB715</small></li>
+          <li><img src="assets/img/nature.jpg" alt="" width="900" height="900"><b>Nature</b><small>LB725</small></li>
+          <li><img src="assets/img/city.jpg" alt="" width="900" height="900"><b>City</b><small>LB745</small></li>
+          <li><img src="assets/img/glamour.jpg" alt="" width="900" height="900"><b>Glamour</b><small>LB755</small></li>
+        </ul>
       </div>
-      <div class="faq__list reveal">
-        <details class="qa"><summary>What if a customer loses or breaks it?</summary><p>Add it to your damage price list, like a child seat or Wi-Fi device.</p></details>
-        <details class="qa"><summary>What about hygiene between customers?</summary><p>Take out the INOX container and put it in the dishwasher. Spare containers and lids are available separately.</p></details>
-        <details class="qa"><summary>Will it work in my cars?</summary><p>Yes. 12V in cars and campers, 24V in vans. A 230V cable for the hotel or cabin is in the box too.</p></details>
-        <details class="qa"><summary>What if it breaks?</summary><p>30-month warranty.</p></details>
-        <details class="qa"><summary>Can customers handle it?</summary><p>Pack it, plug it in, drive. Easier than a Wi-Fi hotspot.</p></details>
-      </div>
+
+      <h3 class="steps__h" data-i18n="steps.h">A hot meal in 5 steps</h3>
+      <ol class="steps">
+        <li><img src="assets/img/step-1.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.1">Prepare</b><span data-i18n="steps.1s">Put the meal in the lunch box.</span></li>
+        <li><img src="assets/img/step-2.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.2">Pack</b><span data-i18n="steps.2s">Place it in the thermal bag.</span></li>
+        <li><img src="assets/img/step-3.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.3">Plug in</b><span data-i18n="steps.3s">12V / 24V in the vehicle or 230V.</span></li>
+        <li><img src="assets/img/step-4.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.4">Wait ~20 min</b><span data-i18n="steps.4s">It heats while you drive or work.</span></li>
+        <li><img src="assets/img/step-5.jpg" alt="" width="500" height="400" loading="lazy"><b data-i18n="steps.5">Eat</b><span data-i18n="steps.5s">Wherever you stop.</span></li>
+      </ol>
+
+      <details class="specs">
+        <summary data-i18n="specs.h">Specs</summary>
+        <div class="specs__body">
+          <table>
+            <tbody>
+              <tr><th data-i18n="specs.power">Power supply</th><td data-i18n="specs.power.v">12 V car / 24 V truck / 230 V mains</td></tr>
+              <tr><th data-i18n="specs.watt">Power</th><td>60 W</td></tr>
+              <tr><th data-i18n="specs.heat">Heating</th><td data-i18n="specs.heat.v">up to 60°C in about 20 min</td></tr>
+              <tr><th data-i18n="specs.main">Main container</th><td data-i18n="specs.main.v">1.1 L stainless steel (INOX), removable</td></tr>
+              <tr><th data-i18n="specs.extra">Extra container</th><td data-i18n="specs.extra.v">0.5 L with lid</td></tr>
+              <tr><th data-i18n="specs.dim">Dimensions</th><td>23 × 16 × 10.5 cm</td></tr>
+              <tr><th data-i18n="specs.weight">Weight</th><td>0.63 kg</td></tr>
+              <tr><th data-i18n="specs.mat">Materials</th><td data-i18n="specs.mat.v">BPA-free</td></tr>
+              <tr><th data-i18n="specs.dish">Dishwasher safe</th><td data-i18n="specs.dish.v">Yes (containers)</td></tr>
+            </tbody>
+          </table>
+          <div>
+            <h4 data-i18n="specs.box">In the box</h4>
+            <p data-i18n="specs.box.v">Lunch box with 1.1 L INOX container · 0.5 L container with lid · metal spoon and fork · 230 V cable · 12/24 V car cable · thermal bag.</p>
+            <h4 data-i18n="specs.know">Good to know</h4>
+            <p data-i18n="specs.know.v">Heating time depends on the meal and outside temperature – food from the fridge on a cold day needs a bit longer. Keep the vent open while heating. Never switch it on empty.</p>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 7 · QUESTIONS (dynamic) -->
+  <section class="faq section" id="faq" data-dyn="faq"></section>
+
+  <!-- 8 · CTA + FORM (dynamic heading + extra fields) -->
+  <section class="cta" id="contact">
+    <div class="cta__inner">
+      <div class="cta__copy" data-dyn="cta"></div>
+      <form class="form" name="lunchee-offer" method="post" action="https://formsubmit.co/mikolaj.chrustowski@gmail.com">
+        <input type="hidden" name="segment" value="rentals">
+        <input type="hidden" name="_subject" value="Lunchee Iceland: new offer request (rentals)">
+        <input type="hidden" name="_template" value="table">
+        <p class="form__hp"><label>Leave empty <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form__grid">
+          <label><span data-ui="name">Full name</span><input name="name" required autocomplete="name"></label>
+          <label><span data-ui="company">Company</span><input name="company" autocomplete="organization"></label>
+          <label><span data-ui="email">Email</span><input name="email" type="email" required autocomplete="email"></label>
+          <label><span data-ui="phone">Phone</span><input name="phone" type="tel" required autocomplete="tel"></label>
+        </div>
+        <div class="form__grid form__extra" data-dyn="fields"></div>
+        <label class="form__full"><span data-ui="message">Message</span><textarea name="message" rows="3"></textarea></label>
+        <p class="form__status" role="status" aria-live="polite"></p>
+        <button type="submit" class="btn btn--accent btn--block" data-submit>Request partner offer</button>
+      </form>
     </div>
   </section>
 </main>
 
+<!-- 9 · FOOTER -->
 <footer class="foot">
-  <img src="assets/img/noveen-logo.png" alt="N'OVEEN" width="124" height="33">
-  <p>N'OVEEN Lunchee electric lunch box</p>
+  <img src="assets/img/lunchee-logo-white.png" alt="Lunchee by N'OVEEN" width="600" height="216">
+  <p data-i18n="foot.p">Official Lunchee partner in Iceland</p>
+  <!-- TODO: replace with the new Lunchee company email + phone -->
+  <p class="foot__contact"><a href="mailto:mikolaj.chrustowski@gmail.com">mikolaj.chrustowski@gmail.com</a> · <a href="tel:+3547825558">+354 782 5558</a></p>
 </footer>
 
-
-<dialog class="modal" id="partner-form" aria-labelledby="pf-title">
-  <form class="modal__box" name="partner-offer" method="post" action="https://formsubmit.co/mikolaj.chrustowski@gmail.com">
-    <button type="button" class="modal__close" data-close-form aria-label="Close">&times;</button>
-    <h2 id="pf-title">Request partner offer</h2>
-    <p class="modal__lead">Tell us a little about your fleet. We'll come back with a partner offer.</p>
-    <input type="hidden" name="_subject" value="N'OVEEN Iceland: new partner offer request">
-    <input type="hidden" name="_template" value="table">
-    <p class="modal__hp"><label>Leave empty <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
-    <div class="modal__grid">
-      <label>Full name<input name="name" required autocomplete="name"></label>
-      <label>Company<input name="company" autocomplete="organization"></label>
-      <label>Email<input name="email" type="email" required autocomplete="email"></label>
-      <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
-      <label>Fleet size (vehicles)<input name="fleet" inputmode="numeric" placeholder="e.g. 120"></label>
-      <label>Units interested in<input name="quantity" inputmode="numeric" placeholder="e.g. 50"></label>
-    </div>
-    <label class="modal__full">Message<textarea name="message" rows="4"></textarea></label>
-    <p class="modal__status" role="status" aria-live="polite"></p>
-    <button type="submit" class="btn btn--orange">Send request</button>
-  </form>
-</dialog>
+<script src="js/content.js" defer></script>
 <script src="js/main.js" defer></script>
-<script src="js/i18n.js" defer></script>
 </body>
 </html>

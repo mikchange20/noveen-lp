@@ -11,6 +11,22 @@ Zwykła strona HTML (bez instalowania czegokolwiek), publikowana przez GitHub Pa
 
 Folder `v2/` to pełna, niezależna kopia (własne `css/`, `js/`, `assets/`), więc zmiany w v2 nie ruszają v1.
 
+### v2 = Lunchee Iceland (wg briefu LUNCHEE_IS_LP_brief.md)
+
+Jedna strona, 4 wersje dla różnych odbiorców – każda ma swój adres:
+
+| Odbiorca | Adres |
+|---|---|
+| Wypożyczalnie (domyślna) | https://mikchange20.github.io/noveen-lp/v2/rentals |
+| Ekipy budowlane | https://mikchange20.github.io/noveen-lp/v2/crews |
+| Kierowcy i floty | https://mikchange20.github.io/noveen-lp/v2/drivers |
+| Sklepy | https://mikchange20.github.io/noveen-lp/v2/stores |
+
+- Teksty wspólne są w `v2/index.html`, teksty 4 wersji (sekcje: Why, How, Questions, formularz) w `v2/js/content.js`.
+- Kolory i czcionka – na górze `v2/css/style.css` (zmienne `--navy`, `--accent`, `--font`).
+- Formularz wysyła ukryte pole `segment` (rentals / crews / drivers / stores).
+- Wersja IS: przycisk jest, ale nieaktywny, dopóki nie dodamy tłumaczeń (`LUNCHEE_COPY.is` w `content.js` i `SHARED.is` w `main.js`).
+
 Oryginał, którego link poszedł mailem do firmy, jest na koncie Natalii:
 https://nataliajagus.github.io/noveen-lp/ – tego repozytorium nie ruszamy.
 
