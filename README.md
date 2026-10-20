@@ -1,0 +1,34 @@
+# Noveen – landing page
+
+Zwykła strona HTML (bez instalowania czegokolwiek), publikowana przez GitHub Pages.
+
+## Gdzie są wersje
+
+| Wersja | Adres | Pliki w repo | Zasady |
+|---|---|---|---|
+| **v1** – wersja wysłana firmie | https://mikchange20.github.io/noveen-lp/ | `index.html`, `css/`, `js/`, `assets/` (w głównym folderze) | **Nie zmieniać.** |
+| **v2** – wersja robocza do testów | https://mikchange20.github.io/noveen-lp/v2/ | wszystko w folderze `v2/` | Tu wprowadzamy wszystkie poprawki. |
+
+Folder `v2/` to pełna, niezależna kopia (własne `css/`, `js/`, `assets/`), więc zmiany w v2 nie ruszają v1.
+
+Oryginał, którego link poszedł mailem do firmy, jest na koncie Natalii:
+https://nataliajagus.github.io/noveen-lp/ – tego repozytorium nie ruszamy.
+
+## Jak wprowadzać zmiany
+
+1. Edytuj pliki w folderze `v2/` (np. `v2/index.html`, `v2/css/style.css`, obrazki w `v2/assets/img/`).
+2. Podgląd lokalnie: otwórz `v2/index.html` w przeglądarce.
+3. Najprościej: poproś Claude w rozmowie „Noveen LP” o zmianę – zrobi ją i opublikuje.
+
+## Jak publikować
+
+Każdy push na gałąź `main` publikuje stronę – zmiany są widoczne po ok. 1 minucie
+(czasem trzeba odświeżyć stronę z Shift, żeby przeglądarka nie pokazywała starej wersji).
+
+```bash
+git add -A
+git commit -m "Opis zmiany"
+git push
+```
+
+Postęp publikacji: zakładka **Actions** w repozytorium na GitHubie.
