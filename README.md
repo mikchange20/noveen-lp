@@ -13,13 +13,14 @@ Folder `v2/` to pełna, niezależna kopia (własne `css/`, `js/`, `assets/`), wi
 
 ### v2 = Lunchee Iceland (wg briefu LUNCHEE_IS_LP_brief.md)
 
-Jedna strona, 4 wersje dla różnych odbiorców – każda ma swój adres:
+Jedna strona, 5 wersji dla różnych odbiorców – każda ma swój adres:
 
 | Odbiorca | Adres |
 |---|---|
 | Wypożyczalnie (domyślna) | https://mikchange20.github.io/noveen-lp/v2/rentals |
 | Ekipy budowlane | https://mikchange20.github.io/noveen-lp/v2/crews |
 | Kierowcy i floty | https://mikchange20.github.io/noveen-lp/v2/drivers |
+| Firmy (prezenty dla pracowników) | https://mikchange20.github.io/noveen-lp/v2/companies |
 | Sklepy | https://mikchange20.github.io/noveen-lp/v2/stores |
 
 - Teksty wspólne są w `v2/index.html`, teksty 4 wersji (sekcje: Why, How, Questions, formularz) w `v2/js/content.js`.
@@ -27,7 +28,9 @@ Jedna strona, 4 wersje dla różnych odbiorców – każda ma swój adres:
   tło #F2B90C, nagłówki #0054A6 + biały, tła dodatkowe #F26A3D (ekipy), #7693DF (kierowcy), #BCDD3F (sklepy).
   Kolory i czcionki są na górze `v2/css/style.css`. Font marki to Coolvetica – do czasu dodania plików fontu
   strona używa podobnego Inter Tight.
-- Formularz wysyła ukryte pole `segment` (rentals / crews / drivers / stores).
+- Formularz wysyła ukryte pole `segment` (rentals / crews / drivers / companies / stores).
+- Czego NIE piszemy na stronie (brief 20.10.2026): długości gwarancji, dostępności akcesoriów, dat dostawy zanim towar jest na Islandii,
+  cen zakupu i nazwy dostawcy. Dla firm wolno: „Zamów do 1 grudnia, dostarczymy przed świętami”.
 - Języki: EN i PL (przełącznik w nagłówku; link z `?lang=pl` otwiera od razu po polsku, np. `.../v2/crews?lang=pl`).
   Wszystkie teksty PL są w `v2/js/content.js` (`LUNCHEE_COPY.pl` – 4 wersje, `LUNCHEE_SHARED.pl` – część wspólna).
 - Wersja IS: przycisk pojawi się sam, gdy dodamy tłumaczenia (`LUNCHEE_COPY.is` i `LUNCHEE_SHARED.is` w `content.js`).

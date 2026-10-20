@@ -16,7 +16,7 @@ window.LUNCHEE_COPY = {
       cta: 'Request partner offer',
       why: {
         h: 'Your margins are under pressure. Your extras list doesn’t have to be.',
-        lead: 'The new per-kilometre road charge eats into every rental. Extras don’t need a new car.',
+        lead: 'The new per-kilometre road charge eats into every rental. Extras don’t need a new car – and a camper’s stove doesn’t work while driving. This does.',
         items: [
           ['coins', 'New revenue, no new car.', 'Add one line to your extras list. Same fleet, more money.'],
           ['tool', 'Zero setup.', 'No installation, no training. The 12V socket is already in every car.'],
@@ -35,7 +35,7 @@ window.LUNCHEE_COPY = {
       },
       faq: [
         ['What if a customer loses or breaks it?', 'Add it to your damage price list, like a child seat or Wi-Fi device.'],
-        ['Hygiene between customers?', 'Take out the INOX container and put it in the dishwasher. Spare containers and lids are available.'],
+        ['Hygiene between customers?', 'Take out the INOX container and put it in the dishwasher.'],
         ['Will it work in my cars?', 'Yes – 12V in cars and campers, 24V in vans. The 230V cable for the hotel or cabin is in the box.'],
         ['Can customers handle it?', 'Pack it, plug it in, drive. Easier than a Wi-Fi hotspot.']
       ],
@@ -55,11 +55,11 @@ window.LUNCHEE_COPY = {
       cta: 'Get a crew offer',
       why: {
         h: 'Hot lunch at the job site. Not 40 minutes away.',
-        lead: 'Outside town, lunch means a cold sandwich in the van or a long drive to the nearest station. In winter it’s dark and freezing on top of that.',
+        lead: 'The office has a canteen. The road crew, the snow plough, the line workers and the boat don’t. Outside town, lunch means a cold sandwich in the van or a long drive to the nearest station – in the dark and the cold.',
         items: [
           ['flame', 'Warm food in the cold.', 'A proper hot meal keeps the crew going through a long day outside.'],
           ['clock', 'No driving for lunch.', 'The break is spent eating, not on the road to the nearest N1.'],
-          ['truck', 'Runs on any vehicle.', '12V in pickups and vans, 24V in trucks. Plug in on the way to site.']
+          ['truck', 'Runs on any vehicle.', '12V in pickups, vans and boats, 24V in trucks and ploughs. Plug in on the way to site.']
         ]
       },
       how: {
@@ -74,7 +74,7 @@ window.LUNCHEE_COPY = {
         ['Will it survive site conditions?', 'Solid build, removable steel container, thermal bag for transport.'],
         ['Can we order for the whole crew?', 'Yes – mix colours in one order, so every worker has their own.'],
         ['Does it work in trucks and machines?', '12V and 24V cables are both in the box.'],
-        ['Warranty?', '30 months.']
+        ['What if something goes wrong?', 'You have a local contact in Iceland who handles complaints – no shipping back to the manufacturer.']
       ],
       form: {
         h: 'Get your crew <span class="accent">a hot lunch.</span>',
@@ -91,7 +91,7 @@ window.LUNCHEE_COPY = {
       cta: 'Get a fleet offer',
       why: {
         h: 'Your break, your food – ready when you stop.',
-        lead: 'Tour drivers wait an hour at Gullfoss or Jökulsárlón where food is the priciest. Long-haul drivers go 200 km in the east without a single station. Taxi shifts don’t wait for lunch.',
+        lead: 'Tour drivers wait an hour at Gullfoss or Jökulsárlón where food is the priciest. Long-haul drivers cross long stretches with no station in sight. Taxi shifts don’t wait for lunch.',
         items: [
           ['plug', 'Heats while you drive.', 'Plug into 12V or 24V and the meal is hot when you park.'],
           ['wallet', 'Cheaper than station food.', 'Bring food from home instead of paying tourist prices every day.'],
@@ -112,7 +112,7 @@ window.LUNCHEE_COPY = {
         ['Does it work on 24V?', 'Yes, the 24V cable is in the box.'],
         ['How long in winter?', 'About 20 minutes; give it a bit longer with cold food on a freezing day.'],
         ['Can we order for the whole fleet?', 'Yes – mix colours in one order.'],
-        ['Warranty?', '30 months.']
+        ['What if something goes wrong?', 'You have a local contact in Iceland who handles complaints – no shipping back to the manufacturer.']
       ],
       form: {
         h: 'Equip your <span class="accent">drivers.</span>',
@@ -125,15 +125,54 @@ window.LUNCHEE_COPY = {
       }
     },
 
+    companies: {
+      title: 'Lunchee for companies in Iceland',
+      cta: 'Get a company offer',
+      why: {
+        h: 'A Christmas gift | they’ll use every working day.',
+        lead: 'Not everyone on your team eats in the canteen. Drivers, field crews and service techs eat wherever the job is. Give them a hot lunch – and a gift that doesn’t end up in a drawer.',
+        items: [
+          ['gift', 'A gift with a purpose.', 'Used every day, all year round – not another gift card.'],
+          ['truck', 'Made for the field team.', 'Runs on 12V and 24V in any company vehicle, and on 230V in the office.'],
+          ['star', 'Your colours, your logo.', 'Mix four colours in one order. Branding with your logo – just ask.']
+        ]
+      },
+      how: {
+        h: 'Two ways to give it.',
+        kind: 'cards',
+        cards: [
+          { h: 'Christmas gift for the team', p: 'One order – every employee gets their own box in their favourite colour.',
+            mock: { title: 'Christmas gift order', type: 'list', rows: ['Pearl × 40', 'City × 50', 'Nature × 30 <em>+ your logo</em>'] } },
+          { h: 'Year-round benefit', p: 'Part of the welcome pack for new hires, or standard kit for crews in the field.',
+            mock: { title: 'Welcome pack', type: 'check', rows: ['Laptop', 'Work jacket', 'Car-powered lunch box <em>+ thermal bag</em>'] } }
+        ]
+      },
+      faq: [
+        ['Can we order for the whole company?', 'Yes – from a few units to hundreds. Mix colours in one order.'],
+        ['Will it arrive before Christmas?', 'Order by 1 December and we’ll deliver before Christmas.'],
+        ['Can you add our logo?', 'Yes – tell us when you request the offer and we’ll include branding.'],
+        ['Invoice for the company?', 'Yes, a regular company invoice.']
+      ],
+      form: {
+        h: 'Give your team <span class="accent">a hot lunch.</span>',
+        lead: 'Order by 1 December and we’ll deliver before Christmas. Tell us how many people are on your team.',
+        button: 'Get a company offer',
+        fields: [
+          { name: 'employees', label: 'Number of employees', type: 'number', placeholder: 'e.g. 120' },
+          { name: 'occasion', label: 'What is it for?', type: 'choice', options: ['Christmas gift', 'Employee benefit', 'Other'] }
+        ]
+      }
+    },
+
     stores: {
       title: 'Lunchee for stores in Iceland',
       cta: 'Become a reseller',
       why: {
         h: 'The Christmas gift | for every Icelander who lives in their car.',
-        lead: 'Summer house trips, ptarmigan hunting, fishing, long drives – Icelanders spend their lives on the road. This is a product for them, not a kitchen gadget.',
+        lead: 'Summer house trips, ptarmigan hunting, fishing, long drives – Icelanders spend their lives on the road. This is a product for them, not a kitchen gadget. Made for gas stations, hardware and outdoor stores, electronics and car parts shops.',
         items: [
           ['gift', 'Ready for the gift season.', 'A practical gift for dads, hunters and drivers.'],
-          ['box', 'Local stock in Iceland.', 'Short delivery, no importing on your side.'],
+          ['box', 'Local partner in Iceland.', 'Ordering, invoicing and support here – no importing on your side.'],
           ['image', 'Ready-made materials.', 'Product photos and descriptions for your shelf and online store.']
         ]
       },
@@ -145,11 +184,11 @@ window.LUNCHEE_COPY = {
         product: 'Lunchee electric lunch box',
         productSub: '12/24 V car + 230 V · thermal bag included',
         badge: 'New',
-        stock: 'In stock'
+        stock: 'Available'
       },
       faq: [
         ['Minimum order?', 'Let’s talk – we start small with new partners.'],
-        ['Delivery?', 'From local stock in Iceland.'],
+        ['Delivery?', 'Delivered to your store in Iceland – we confirm the date with your order.'],
         ['Can I mix colours?', 'Yes, all four colours in one order.'],
         ['Product materials?', 'Packshots, descriptions and specs ready to use.']
       ],
@@ -180,7 +219,7 @@ window.LUNCHEE_COPY = {
       cta: 'Poproś o ofertę partnerską',
       why: {
         h: 'Marże topnieją. Twoja lista dodatków może zarabiać więcej.',
-        lead: 'Nowa opłata drogowa za każdy przejechany kilometr zjada zysk z każdego wynajmu. Dodatki nie wymagają nowego auta.',
+        lead: 'Nowa opłata drogowa za każdy przejechany kilometr zjada zysk z każdego wynajmu. Dodatki nie wymagają nowego auta – a kuchenka w kamperze nie działa w trakcie jazdy. Lunchee tak.',
         items: [
           ['coins', 'Nowy przychód, bez nowego auta.', 'Dopisz jedną pozycję do listy dodatków. Ta sama flota, więcej pieniędzy.'],
           ['tool', 'Zero wdrożenia.', 'Bez montażu, bez szkoleń. Gniazdo 12V jest już w każdym aucie.'],
@@ -199,7 +238,7 @@ window.LUNCHEE_COPY = {
       },
       faq: [
         ['Co jeśli klient go zgubi albo zepsuje?', 'Dopisz go do cennika szkód, tak jak fotelik czy urządzenie Wi-Fi.'],
-        ['A higiena między klientami?', 'Wyjmij pojemnik INOX i włóż go do zmywarki. Zapasowe pojemniki i pokrywki są dostępne.'],
+        ['A higiena między klientami?', 'Wyjmij pojemnik INOX i włóż go do zmywarki.'],
         ['Czy zadziała w moich autach?', 'Tak – 12V w osobówkach i kamperach, 24V w busach. Kabel 230V do hotelu czy domku jest w zestawie.'],
         ['Czy klienci sobie poradzą?', 'Spakuj, podłącz, jedź. Prościej niż hotspot Wi-Fi.']
       ],
@@ -219,11 +258,11 @@ window.LUNCHEE_COPY = {
       cta: 'Oferta dla ekipy',
       why: {
         h: 'Ciepły lunch na budowie. Nie 40 minut drogi stąd.',
-        lead: 'Poza miastem lunch to zimna kanapka w busie albo długi dojazd do najbliższej stacji. Zimą do tego ciemno i mróz.',
+        lead: 'Biuro ma stołówkę. Ekipa drogowa, pług, monterzy linii i łódź – już nie. Poza miastem lunch to zimna kanapka w busie albo długi dojazd do najbliższej stacji – po ciemku i na mrozie.',
         items: [
           ['flame', 'Ciepłe jedzenie w zimnie.', 'Porządny ciepły posiłek daje ekipie siłę na długi dzień na zewnątrz.'],
           ['clock', 'Bez jeżdżenia na obiad.', 'Przerwa jest na jedzenie, nie na dojazd do najbliższej stacji N1.'],
-          ['truck', 'Działa w każdym pojeździe.', '12V w pickupach i busach, 24V w ciężarówkach. Podłączasz po drodze na budowę.']
+          ['truck', 'Działa w każdym pojeździe.', '12V w pickupach, busach i łodziach, 24V w ciężarówkach i pługach. Podłączasz po drodze na budowę.']
         ]
       },
       how: {
@@ -238,7 +277,7 @@ window.LUNCHEE_COPY = {
         ['Czy przetrwa warunki na budowie?', 'Solidna konstrukcja, wyjmowany stalowy pojemnik, torba termiczna do transportu.'],
         ['Czy możemy zamówić dla całej ekipy?', 'Tak – różne kolory w jednym zamówieniu, żeby każdy miał swój.'],
         ['Czy działa w ciężarówkach i maszynach?', 'Kable 12V i 24V są w zestawie.'],
-        ['Gwarancja?', '30 miesięcy.']
+        ['A jeśli coś się zepsuje?', 'Masz lokalny kontakt na Islandii, który obsługuje reklamacje – bez odsyłania do producenta.']
       ],
       form: {
         h: 'Ciepły lunch <span class="accent">dla Twojej ekipy.</span>',
@@ -255,7 +294,7 @@ window.LUNCHEE_COPY = {
       cta: 'Oferta dla floty',
       why: {
         h: 'Twoja przerwa, Twoje jedzenie – gotowe, kiedy się zatrzymasz.',
-        lead: 'Kierowcy wycieczek czekają godzinę przy Gullfoss czy Jökulsárlón, gdzie jedzenie jest najdroższe. Kierowcy w trasie robią na wschodzie 200 km bez ani jednej stacji. Zmiana w taksówce nie czeka na lunch.',
+        lead: 'Kierowcy wycieczek czekają godzinę przy Gullfoss czy Jökulsárlón, gdzie jedzenie jest najdroższe. Kierowcy w trasie pokonują długie odcinki bez żadnej stacji po drodze. Zmiana w taksówce nie czeka na lunch.',
         items: [
           ['plug', 'Grzeje się w trakcie jazdy.', 'Podłącz do 12V lub 24V – posiłek jest ciepły, kiedy parkujesz.'],
           ['wallet', 'Taniej niż jedzenie na stacji.', 'Bierzesz jedzenie z domu, zamiast codziennie płacić turystyczne ceny.'],
@@ -276,7 +315,7 @@ window.LUNCHEE_COPY = {
         ['Czy działa na 24V?', 'Tak, kabel 24V jest w zestawie.'],
         ['Ile to trwa zimą?', 'Około 20 minut; przy zimnym jedzeniu w mroźny dzień trochę dłużej.'],
         ['Czy możemy zamówić dla całej floty?', 'Tak – różne kolory w jednym zamówieniu.'],
-        ['Gwarancja?', '30 miesięcy.']
+        ['A jeśli coś się zepsuje?', 'Masz lokalny kontakt na Islandii, który obsługuje reklamacje – bez odsyłania do producenta.']
       ],
       form: {
         h: 'Wyposaż swoich <span class="accent">kierowców.</span>',
@@ -289,15 +328,54 @@ window.LUNCHEE_COPY = {
       }
     },
 
+    companies: {
+      title: 'Lunchee dla firm na Islandii',
+      cta: 'Oferta dla firmy',
+      why: {
+        h: 'Świąteczny prezent, | którego użyją w każdy dzień pracy.',
+        lead: 'Nie każdy w Twoim zespole je w stołówce. Kierowcy, ekipy w terenie i serwisanci jedzą tam, gdzie akurat jest robota. Daj im ciepły lunch – i prezent, który nie wyląduje w szufladzie.',
+        items: [
+          ['gift', 'Prezent z sensem.', 'Używany codziennie, przez cały rok – a nie kolejna karta podarunkowa.'],
+          ['truck', 'Stworzony dla ekip w terenie.', 'Działa na 12V i 24V w każdym aucie firmowym i na 230V w biurze.'],
+          ['star', 'Wasze kolory, Wasze logo.', 'Cztery kolory w jednym zamówieniu. Branding z logo firmy – wystarczy zapytać.']
+        ]
+      },
+      how: {
+        h: 'Dwa sposoby, żeby go podarować.',
+        kind: 'cards',
+        cards: [
+          { h: 'Świąteczny prezent dla zespołu', p: 'Jedno zamówienie – każdy pracownik dostaje swój lunchbox w ulubionym kolorze.',
+            mock: { title: 'Zamówienie świąteczne', type: 'list', rows: ['Pearl × 40', 'City × 50', 'Nature × 30 <em>+ Wasze logo</em>'] } },
+          { h: 'Benefit na cały rok', p: 'W pakiecie powitalnym dla nowych osób albo jako standardowe wyposażenie ekip w terenie.',
+            mock: { title: 'Pakiet powitalny', type: 'check', rows: ['Laptop', 'Kurtka robocza', 'Elektryczny Lunchbox <em>+ torba termiczna</em>'] } }
+        ]
+      },
+      faq: [
+        ['Czy możemy zamówić dla całej firmy?', 'Tak – od kilku do kilkuset sztuk. Kolory można mieszać w jednym zamówieniu.'],
+        ['Czy dotrze przed świętami?', 'Zamów do 1 grudnia, a dostarczymy przed świętami.'],
+        ['Czy możecie dodać nasze logo?', 'Tak – napisz o tym w zapytaniu, a uwzględnimy branding w ofercie.'],
+        ['Faktura na firmę?', 'Tak, standardowa faktura dla firmy.']
+      ],
+      form: {
+        h: 'Daj swojemu zespołowi <span class="accent">ciepły lunch.</span>',
+        lead: 'Zamów do 1 grudnia, a dostarczymy przed świętami. Napisz, ile osób liczy Twój zespół.',
+        button: 'Poproś o ofertę dla firmy',
+        fields: [
+          { name: 'employees', label: 'Liczba pracowników', type: 'number', placeholder: 'np. 120' },
+          { name: 'occasion', label: 'Na jaką okazję?', type: 'choice', options: ['Prezent świąteczny', 'Benefit dla pracowników', 'Inne'] }
+        ]
+      }
+    },
+
     stores: {
       title: 'Lunchee dla sklepów na Islandii',
       cta: 'Zostań sprzedawcą',
       why: {
         h: 'Prezent pod choinkę | dla każdego Islandczyka, który żyje w samochodzie.',
-        lead: 'Wyjazdy do domku letniskowego, polowania na pardwy, wędkowanie, długie trasy – Islandczycy spędzają życie w drodze. To produkt dla nich, a nie kuchenny gadżet.',
+        lead: 'Wyjazdy do domku letniskowego, polowania na pardwy, wędkowanie, długie trasy – Islandczycy spędzają życie w drodze. To produkt dla nich, a nie kuchenny gadżet. Idealny dla stacji paliw, sklepów budowlanych, outdoorowych, z elektroniką i częściami samochodowymi.',
         items: [
           ['gift', 'Gotowy na sezon prezentowy.', 'Praktyczny prezent dla ojców, myśliwych i kierowców.'],
-          ['box', 'Lokalny magazyn na Islandii.', 'Krótka dostawa, bez importu po Twojej stronie.'],
+          ['box', 'Lokalny partner na Islandii.', 'Zamówienia, faktury i obsługa na miejscu – bez importu po Twojej stronie.'],
           ['image', 'Gotowe materiały.', 'Zdjęcia produktu i opisy na półkę i do sklepu internetowego.']
         ]
       },
@@ -313,7 +391,7 @@ window.LUNCHEE_COPY = {
       },
       faq: [
         ['Minimalne zamówienie?', 'Porozmawiajmy – z nowymi partnerami zaczynamy od małych ilości.'],
-        ['Dostawa?', 'Z lokalnego magazynu na Islandii.'],
+        ['Dostawa?', 'Dostarczamy do Twojego sklepu na Islandii – termin potwierdzamy przy zamówieniu.'],
         ['Czy mogę mieszać kolory?', 'Tak, wszystkie cztery kolory w jednym zamówieniu.'],
         ['Materiały produktowe?', 'Packshoty, opisy i specyfikacja gotowe do użycia.']
       ],
@@ -340,17 +418,17 @@ window.LUNCHEE_SHARED = {
     'hero.tagline': 'Twój czas na ciepły posiłek',
     'badge.heat': 'podgrzanie do',
     'badge.power': 'źródła zasilania',
-    'hero.h1': 'Ciepły posiłek,',
-    'hero.h2': 'gdziekolwiek jedziesz.',
+    'hero.h1': 'Kraina ognia i lodu.',
+    'hero.h2': 'I ciepłego lunchu.',
     'hero.sub': 'Elektryczny lunchbox zasilany z gniazda 12V lub 24V w samochodzie. Ciepłe jedzenie w około 20&nbsp;minut – <strong>w trasie, na budowie, między kursami.</strong>',
     'hero.alt': 'Podróżniczka je ciepły posiłek z lunchboxa obok samochodu na islandzkiej drodze',
     'stats.1': 'zasilanie z auta',
     'stats.2': 'do ciepłego posiłku',
     'stats.3b': 'Torba termiczna',
     'stats.3': 'w zestawie',
-    'stats.4b': '30 miesięcy',
-    'stats.4': 'gwarancji',
-    'who.eyebrow': 'Jeden lunchbox, cztery zastosowania',
+    'stats.4b': 'Marka z UE',
+    'stats.4': 'z pełną dokumentacją',
+    'who.eyebrow': 'Jeden lunchbox, wiele zastosowań',
     'who.h': 'Kim jesteś?',
     'who.rentals': 'Wypożyczalnie aut',
     'who.rentals.s': 'Nowy dodatek do każdej rezerwacji',
@@ -358,6 +436,8 @@ window.LUNCHEE_SHARED = {
     'who.crews.s': 'Ciepły lunch na budowie',
     'who.drivers': 'Kierowcy i floty',
     'who.drivers.s': 'Prawdziwy posiłek między kursami',
+    'who.companies': 'Firmy',
+    'who.companies.s': 'Prezent, którego zespół użyje codziennie',
     'who.stores': 'Sklepy',
     'who.stores.s': 'Produkt, którego potrzebują Islandczycy',
     'product.eyebrow': 'Lunchee – elektryczny lunchbox',

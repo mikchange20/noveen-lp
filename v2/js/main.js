@@ -1,6 +1,6 @@
 (() => {
   const COPY = window.LUNCHEE_COPY;
-  const AUDS = ['rentals', 'crews', 'drivers', 'stores'];
+  const AUDS = ['rentals', 'crews', 'drivers', 'companies', 'stores'];
   const LANGS = ['en', 'pl', 'is'];
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -54,7 +54,7 @@
 
   const renderHow = (h, u) => {
     let body = '';
-    if (h.kind === 'rentals') {
+    if (h.kind === 'rentals' || h.kind === 'cards') {
       body = `<div class="models__grid">${h.cards.map((c) => `
         <article class="model-card reveal"><h3>${c.h}</h3><p>${c.p}</p>${mock(c.mock)}</article>`).join('')}</div>`;
     } else if (h.kind === 'crews') {

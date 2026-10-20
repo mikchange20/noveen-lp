@@ -35,6 +35,7 @@
 html[data-aud="crews"] { --aud: var(--coral); }
 html[data-aud="drivers"] { --aud: var(--sky); }
 html[data-aud="stores"] { --aud: var(--lime); }
+html[data-aud="companies"] { --aud: linear-gradient(135deg, var(--yellow) 0%, var(--coral) 100%); }
 @media (min-width: 720px) { :root { --gutter: clamp(24px, 4vw, 56px); } }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -186,7 +187,8 @@ h3 { font-size: 20px; font-weight: 700; line-height: 1.2; color: var(--blue); }
 .tile[aria-pressed="true"] span { color: rgba(255, 255, 255, .85); }
 .tile[aria-pressed="true"] .ico { stroke: var(--yellow); }
 .tile[aria-pressed="true"]::after { content: ""; position: absolute; top: 14px; right: 14px; width: 12px; height: 12px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 0 4px rgba(242, 185, 12, .3); }
-@media (min-width: 960px) { .tiles { grid-template-columns: repeat(4, 1fr); gap: 16px; } .tile { padding: 26px 24px 28px; } .tile b { font-size: 22px; } .tile span { font-size: 15px; } }
+.tile:last-child:nth-child(odd) { grid-column: 1 / -1; }
+@media (min-width: 960px) { .tiles { grid-template-columns: repeat(5, 1fr); gap: 14px; } .tile:last-child:nth-child(odd) { grid-column: auto; } .tile { padding: 22px 18px 24px; } .tile b { font-size: 19px; } .tile span { font-size: 14px; } }
 
 /* swap animation for dynamic sections */
 [data-dyn] { transition: opacity .3s var(--ease), transform .3s var(--ease); }
