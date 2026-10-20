@@ -6,18 +6,18 @@
 <title>Lunchee Iceland – a hot meal anywhere you drive</title>
 <meta name="description" content="An electric lunch box that runs on your car's 12V or 24V socket. Hot food in about 20 minutes – for car rentals, work crews, drivers and stores in Iceland.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#04419C">
+<meta name="theme-color" content="#F2B90C">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500..900&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..800&family=Outfit:wght@500..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- 1 · HEADER -->
 <header class="nav" id="nav">
-  <a href="#top" class="nav__logo" aria-label="Lunchee – top of page"><img src="assets/img/lunchee-logo-black.png" alt="Lunchee" width="600" height="135"></a>
+  <a href="#top" class="nav__logo" aria-label="Lunchee – top of page"><img src="assets/img/lunchee-logo-white.png" alt="Lunchee" width="640" height="142"></a>
   <div class="nav__right">
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -31,11 +31,13 @@
 <main id="top">
 
   <!-- 2 · HERO (shared) -->
+  <div class="hero-wrap brand-bg">
   <section class="hero">
     <div class="hero__copy">
+      <p class="eyebrow reveal-load" style="--d:0" data-i18n="hero.tagline">Your time for a warm meal</p>
       <h1 class="hero__title">
         <span class="line reveal-load" style="--d:1" data-i18n="hero.h1">A hot meal</span>
-        <span class="line line--hot reveal-load" style="--d:2" data-i18n="hero.h2">anywhere you&nbsp;drive.</span>
+        <span class="line line--hot reveal-load" style="--d:2" data-i18n="hero.h2">anywhere you drive.</span>
       </h1>
       <p class="hero__sub reveal-load" style="--d:3" data-i18n="hero.sub">An electric lunch box that runs on your car's 12V or 24V socket. Hot food in about 20&nbsp;minutes – <strong>on the road, on site, between rides.</strong></p>
       <div class="hero__actions reveal-load" style="--d:4"><a class="btn" href="#contact" data-cta>Request partner offer</a></div>
@@ -43,6 +45,10 @@
     <figure class="hero__photo reveal-load" style="--d:2">
       <!-- Gimmie the Trip expedition photo -->
       <img src="assets/img/hero-iceland.jpg" alt="Traveller eating a hot meal from the lunch box next to her car on an Icelandic road" data-i18n-alt="hero.alt" width="1080" height="1350" fetchpriority="high">
+      <div class="badges" aria-hidden="true">
+        <span class="badge badge--heat"><img src="assets/img/badge-60c.png" alt="" width="203" height="360"><i data-i18n="badge.heat">up to</i></span>
+        <span class="badge badge--power"><img src="assets/img/badge-3power.png" alt="" width="239" height="360"><i data-i18n="badge.power">power sources</i></span>
+      </div>
     </figure>
     <ul class="facts reveal-load" style="--d:5">
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><b>12 / 24 V</b><span data-i18n="stats.1">car powered</span></li>
@@ -51,6 +57,7 @@
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><b data-i18n="stats.4b">30-month</b><span data-i18n="stats.4">warranty</span></li>
     </ul>
   </section>
+  </div>
 
   <!-- 3 · WHO ARE YOU? (shared) -->
   <section class="who" id="who" aria-labelledby="who-h">
@@ -112,7 +119,7 @@
   </section>
 
   <!-- 6b · 5 STEPS (graphics from the N'OVEEN leaflet) -->
-  <section class="steps5" id="steps">
+  <section class="steps5 brand-bg" id="steps">
     <div class="steps5__inner">
       <h2 class="steps5__title reveal" data-i18n="steps.h"><b>A hot meal</b> in 5 steps</h2>
       <ol class="steps5__list">
@@ -183,7 +190,7 @@
 
 <!-- 9 · FOOTER -->
 <footer class="foot">
-  <img src="assets/img/lunchee-logo-white.png" alt="Lunchee by N'OVEEN" width="600" height="216">
+  <img src="assets/img/lunchee-logo-white-noveen.png" alt="Lunchee by N'OVEEN" width="640" height="230">
   <p data-i18n="foot.p">Official Lunchee partner in Iceland</p>
   <!-- TODO: replace with the new Lunchee company email + phone -->
   <p class="foot__contact"><a href="mailto:mikolaj.chrustowski@gmail.com">mikolaj.chrustowski@gmail.com</a> · <a href="tel:+3547825558">+354 782 5558</a></p>

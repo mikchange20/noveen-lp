@@ -129,7 +129,7 @@ window.LUNCHEE_COPY = {
       title: 'Lunchee for stores in Iceland',
       cta: 'Become a reseller',
       why: {
-        h: 'The Christmas gift for every Icelander who lives in their car.',
+        h: 'The Christmas gift | for every Icelander who lives in their car.',
         lead: 'Summer house trips, ptarmigan hunting, fishing, long drives – Icelanders spend their lives on the road. This is a product for them, not a kitchen gadget.',
         items: [
           ['gift', 'Ready for the gift season.', 'A practical gift for dads, hunters and drivers.'],
@@ -293,7 +293,7 @@ window.LUNCHEE_COPY = {
       title: 'Lunchee dla sklepów na Islandii',
       cta: 'Zostań sprzedawcą',
       why: {
-        h: 'Prezent pod choinkę dla każdego Islandczyka, który żyje w samochodzie.',
+        h: 'Prezent pod choinkę | dla każdego Islandczyka, który żyje w samochodzie.',
         lead: 'Wyjazdy do domku letniskowego, polowania na pardwy, wędkowanie, długie trasy – Islandczycy spędzają życie w drodze. To produkt dla nich, a nie kuchenny gadżet.',
         items: [
           ['gift', 'Gotowy na sezon prezentowy.', 'Praktyczny prezent dla ojców, myśliwych i kierowców.'],
@@ -337,8 +337,11 @@ window.LUNCHEE_COPY = {
 // a missing key keeps the English text.
 window.LUNCHEE_SHARED = {
   pl: {
+    'hero.tagline': 'Twój czas na ciepły posiłek',
+    'badge.heat': 'podgrzanie do',
+    'badge.power': 'źródła zasilania',
     'hero.h1': 'Ciepły posiłek,',
-    'hero.h2': 'gdziekolwiek&nbsp;jedziesz.',
+    'hero.h2': 'gdziekolwiek jedziesz.',
     'hero.sub': 'Elektryczny lunchbox zasilany z gniazda 12V lub 24V w samochodzie. Ciepłe jedzenie w około 20&nbsp;minut – <strong>w trasie, na budowie, między kursami.</strong>',
     'hero.alt': 'Podróżniczka je ciepły posiłek z lunchboxa obok samochodu na islandzkiej drodze',
     'stats.1': 'zasilanie z auta',

@@ -92,6 +92,12 @@
     return `<div class="how__head reveal"><h2>${h.h}</h2></div>${body}`;
   };
 
+  // Brand headline: first part blue, the rest white ("Twój czas na / ciepły posiłek")
+  const twoTone = (txt) => {
+    const m = txt.match(/^(.+?)\s*\|\s*(.+)$/) || txt.match(/^(.+?[.?!])\s+(.+)$/) || txt.match(/^(.+?\s[–—])\s+(.+)$/);
+    return m ? `<span class="tt-blue">${m[1]}</span> <span class="tt-white">${m[2]}</span>` : `<span class="tt-blue">${txt}</span>`;
+  };
+
   const renderField = (f) => {
     if (f.type === 'choice') {
       const type = f.multiple ? 'checkbox' : 'radio';
@@ -107,7 +113,7 @@
     const tile = $(`.tile[data-aud="${aud}"] b`);
 
     $('[data-dyn="why"]').innerHTML = `
-      <div class="why__head reveal"><p class="eyebrow">${tile ? tile.textContent : ''}</p><h2>${c.why.h}</h2><p class="lead">${c.why.lead}</p></div>
+      <div class="why__head reveal"><p class="pill">${tile ? tile.textContent : ''}</p><h2>${twoTone(c.why.h)}</h2><p class="lead">${c.why.lead}</p></div>
       <ul class="why__list">${c.why.items.map(([ic, h, p]) => `<li class="reveal">${icon(ic)}<h3>${h}</h3><p>${p}</p></li>`).join('')}</ul>`;
     $('[data-dyn="how"]').innerHTML = renderHow(c.how, u);
     $('[data-dyn="faq"]').innerHTML = `<div class="faq__head reveal"><h2>${u.faq}</h2></div>
