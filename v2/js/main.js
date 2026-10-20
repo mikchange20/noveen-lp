@@ -26,7 +26,9 @@
     image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>',
     bus: '<rect x="4" y="3" width="16" height="15" rx="2"/><path d="M4 11h16M8 7h8"/><circle cx="8" cy="14.5" r="1"/><circle cx="16" cy="14.5" r="1"/><path d="M6.5 18v2.5M17.5 18v2.5"/>',
     taxi: '<path d="M3 17v-4l2-5h14l2 5v4z"/><path d="M3 13h18M9 8l.5-3h5l.5 3"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="16.5" cy="17.5" r="2"/>',
-    camera: '<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>'
+    camera: '<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
+    tree: '<path d="M12 3 7 9h3l-4 5h4l-5 6h14l-5-6h4l-4-5h3z"/><path d="M12 20v2"/>',
+    flake: '<path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2M4 10.5l3.5-.5L6 7M18 14l-1.5 3 3.5-.5M4 13.5l3.5.5L6 17M18 10l-1.5-3 3.5.5"/>'
   };
   const icon = (n, cls = 'ico') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICON[n] || ''}</svg>`;
 
@@ -42,6 +44,50 @@
   const watchReveals = () => $$('.reveal:not(.is-in)').forEach((el) => {
     if (io && !(swapping && el.closest('[data-dyn]'))) io.observe(el); else el.classList.add('is-in');
   });
+
+  // ---------- Falling snow (stores / Christmas only) ----------
+  const snow = (() => {
+    let cv, ctx, flakes = [], raf = 0, active = false, userOn = true;
+    const make = () => {
+      const w = innerWidth, h = innerHeight, n = Math.min(90, Math.round(w * h / 14000));
+      flakes = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, r: 1 + Math.random() * 3, s: .3 + Math.random() * .9, d: Math.random() * Math.PI * 2 }));
+    };
+    const size = () => { const dpr = Math.min(devicePixelRatio || 1, 2); cv.width = innerWidth * dpr; cv.height = innerHeight * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); make(); };
+    const tick = () => {
+      const w = innerWidth, h = innerHeight;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = 'rgba(255,255,255,.9)';
+      ctx.shadowColor = 'rgba(0,60,120,.35)'; ctx.shadowBlur = 3;
+      for (const f of flakes) {
+        f.y += f.s; f.d += .01; f.x += Math.sin(f.d) * .4;
+        if (f.y > h + 5) { f.y = -5; f.x = Math.random() * w; }
+        ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2); ctx.fill();
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    const start = () => {
+      if (raf || reduce) return;
+      if (!cv) {
+        cv = document.createElement('canvas'); cv.className = 'snow'; cv.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(cv); ctx = cv.getContext('2d');
+        addEventListener('resize', () => cv && size());
+      }
+      cv.hidden = false; size(); raf = requestAnimationFrame(tick);
+    };
+    const stop = () => { cancelAnimationFrame(raf); raf = 0; if (cv) cv.hidden = true; };
+    document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(raf); raf = 0; } else if (active && userOn) start(); });
+    return {
+      get on() { return userOn; },
+      enable(v) { active = v; if (active && userOn) start(); else stop(); },
+      toggle() { userOn = !userOn; this.enable(active); }
+    };
+  })();
+
+  const goToForm = (e) => {
+    e.preventDefault();
+    $('#contact').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    setTimeout(() => $('.form [name="name"]').focus({ preventScroll: true }), 600);
+  };
 
   let lang = 'en';
   let aud = 'rentals';
@@ -92,6 +138,37 @@
     return `<div class="how__head reveal"><h2>${h.h}</h2></div>${body}`;
   };
 
+  // Christmas gift campaign (stores) – test version
+  const daysToXmas = () => {
+    const now = new Date();
+    let eve = new Date(now.getFullYear(), 11, 24);
+    if (now > new Date(now.getFullYear(), 11, 26)) eve = new Date(now.getFullYear() + 1, 11, 24);
+    return Math.max(0, Math.ceil((eve - now) / 864e5));
+  };
+  const renderXmas = (x) => `
+    <div class="xmas__inner">
+      <div class="xmas__head reveal">
+        <p class="pill pill--xmas">${icon('tree')}${x.pill}</p>
+        <h2>${twoTone(x.h)}</h2>
+        <p class="lead">${x.lead}</p>
+      </div>
+      <div class="xmas__count reveal" aria-live="off">
+        <b>${daysToXmas()}</b><span>${x.countdown}</span><em>${x.greeting}</em>
+      </div>
+      <h3 class="xmas__sub reveal">${x.guideH}</h3>
+      <ul class="guide">${x.guide.map(([f, h, p]) => `
+        <li class="reveal"><span class="guide__tag">${icon('gift')}</span><img src="assets/img/${f}.jpg" alt="" width="900" height="900" loading="lazy"><b>${h}</b><p>${p}</p></li>`).join('')}</ul>
+      <div class="xmas__grid">
+        <div class="xmas__kit reveal"><h3 class="xmas__sub">${x.kitH}</h3>
+          <ul>${x.kit.map(([ic, h, p]) => `<li>${icon(ic)}<div><b>${h}</b><p>${p}</p></div></li>`).join('')}</ul></div>
+        <div class="xmas__plan reveal"><h3 class="xmas__sub">${x.planH}</h3>
+          <ol>${x.plan.map(([d, p]) => `<li><b>${d}</b><span>${p}</span></li>`).join('')}</ol>
+          <a class="btn btn--yellow" href="#contact" data-cta-xmas>${x.cta}</a>
+          <button type="button" class="snow-toggle" data-snow-toggle aria-pressed="true">${icon('flake')}<span>${x.snowOn}</span></button>
+        </div>
+      </div>
+    </div>`;
+
   // Brand headline: first part blue, the rest white ("Twój czas na / ciepły posiłek")
   const twoTone = (txt) => {
     const m = txt.match(/^(.+?)\s*\|\s*(.+)$/) || txt.match(/^(.+?[.?!])\s+(.+)$/) || txt.match(/^(.+?\s[–—])\s+(.+)$/);
@@ -116,6 +193,21 @@
       <div class="why__head reveal"><p class="pill">${tile ? tile.textContent : ''}</p><h2>${twoTone(c.why.h)}</h2><p class="lead">${c.why.lead}</p></div>
       <ul class="why__list">${c.why.items.map(([ic, h, p]) => `<li class="reveal">${icon(ic)}<h3>${h}</h3><p>${p}</p></li>`).join('')}</ul>`;
     $('[data-dyn="how"]').innerHTML = renderHow(c.how, u);
+    const xm = $('[data-dyn="xmas"]');
+    const x = c.form.xmas;
+    xm.hidden = !x;
+    xm.innerHTML = x ? renderXmas(x) : '';
+    const tag = $('[data-xmas-tag]');
+    tag.hidden = !x;
+    tag.innerHTML = x ? `${icon('gift')}<span>${c.how.badge}</span>` : '';
+    if (x) {
+      $('[data-cta-xmas]').addEventListener('click', goToForm);
+      const tg = $('[data-snow-toggle]');
+      const syncToggle = () => { tg.setAttribute('aria-pressed', String(snow.on)); tg.querySelector('span').textContent = snow.on ? x.snowOn : x.snowOff; };
+      syncToggle();
+      tg.addEventListener('click', () => { snow.toggle(); syncToggle(); });
+    }
+    snow.enable(!!x);
     $('[data-dyn="faq"]').innerHTML = `<div class="faq__head reveal"><h2>${u.faq}</h2></div>
       <div class="faq__list reveal">${c.faq.map(([q, a]) => `<details class="qa"><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>`;
     $('[data-dyn="cta"]').innerHTML = `<h2>${c.form.h}</h2><p>${c.form.lead}</p>`;
@@ -204,11 +296,7 @@
   setLang(new URLSearchParams(location.search).get('lang') || saved || 'en');
 
   // ---------- Header CTA → form ----------
-  $$('[data-cta]').forEach((a) => a.addEventListener('click', (e) => {
-    e.preventDefault();
-    $('#contact').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
-    setTimeout(() => $('.form [name="name"]').focus({ preventScroll: true }), 600);
-  }));
+  $$('[data-cta]').forEach((a) => a.addEventListener('click', goToForm));
 
   // Header shadow after scrolling
   const nav = $('#nav');

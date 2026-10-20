@@ -144,18 +144,48 @@ window.LUNCHEE_COPY = {
         online: 'Online',
         product: 'Lunchee electric lunch box',
         productSub: '12/24 V car + 230 V · thermal bag included',
-        badge: 'New',
+        badge: 'Gift idea',
         stock: 'In stock'
       },
       faq: [
         ['Minimum order?', 'Let’s talk – we start small with new partners.'],
         ['Delivery?', 'From local stock in Iceland.'],
         ['Can I mix colours?', 'Yes, all four colours in one order.'],
-        ['Product materials?', 'Packshots, descriptions and specs ready to use.']
+        ['Product materials?', 'Packshots, descriptions and specs ready to use.'],
+        ['When should I order for Christmas?', 'The earlier the better – ideally in November, so the stock and the Christmas materials are in your store before December.']
       ],
       form: {
         h: 'Put Lunchee <span class="accent">on your shelf.</span>',
-        lead: 'Tell us about your store and we’ll send a reseller offer.',
+        lead: 'Tell us about your store and we’ll send a reseller offer – with the Christmas campaign kit.',
+        xmas: {
+          pill: 'Christmas gift campaign',
+          h: '13 Yule Lads. | One gift everyone will actually use.',
+          lead: 'Icelanders spend the holidays on the road – to family, to the summer house, to the hunt. Lunchee is the practical gift for all of them. Here is a ready-made Christmas campaign for your store.',
+          countdown: 'days to Christmas Eve',
+          greeting: 'Gleðileg jól!',
+          guideH: 'Gift guide for your customers',
+          guide: [
+            ['nature', 'For the hunter', 'A hot lunch on the heath during ptarmigan season.'],
+            ['pearl', 'For the summer-house family', 'Weekend at the bústaður, dinner already in the car.'],
+            ['city', 'For the long-haul driver', 'Reykjavík–Akureyri with a real meal on the way.'],
+            ['glamour', 'For the one who has everything', 'Something they don’t have yet – and will use every day.']
+          ],
+          kitH: 'Your Christmas campaign kit',
+          kit: [
+            ['gift', 'Gift-ready set', 'Lunch box, thermal bag and cutlery in one box – a complete gift, no extras needed.'],
+            ['image', 'Shelf & window materials', 'Christmas shelf talker, poster and gift tags in Icelandic and English.'],
+            ['star', 'Social media pack', 'Ready posts and stories for Advent – just add your store name.']
+          ],
+          planH: 'Your Christmas plan',
+          plan: [
+            ['Now – November', 'Order and get the campaign materials.'],
+            ['From 1 December', 'On the shelf with the Christmas display.'],
+            ['12–24 December', 'Yule Lads season – peak gift shopping.']
+          ],
+          cta: 'Join the Christmas campaign',
+          snowOn: 'Snow: on',
+          snowOff: 'Snow: off'
+        },
         button: 'Become a reseller',
         companyLabel: 'Store / company',
         fields: [
@@ -308,18 +338,48 @@ window.LUNCHEE_COPY = {
         online: 'Online',
         product: 'Elektryczny lunchbox Lunchee',
         productSub: '12/24 V auto + 230 V · torba termiczna w zestawie',
-        badge: 'Nowość',
+        badge: 'Pomysł na prezent',
         stock: 'Dostępny'
       },
       faq: [
         ['Minimalne zamówienie?', 'Porozmawiajmy – z nowymi partnerami zaczynamy od małych ilości.'],
         ['Dostawa?', 'Z lokalnego magazynu na Islandii.'],
         ['Czy mogę mieszać kolory?', 'Tak, wszystkie cztery kolory w jednym zamówieniu.'],
-        ['Materiały produktowe?', 'Packshoty, opisy i specyfikacja gotowe do użycia.']
+        ['Materiały produktowe?', 'Packshoty, opisy i specyfikacja gotowe do użycia.'],
+        ['Kiedy zamówić na święta?', 'Im wcześniej, tym lepiej – najlepiej w listopadzie, żeby towar i świąteczne materiały były w sklepie przed grudniem.']
       ],
       form: {
         h: 'Postaw Lunchee <span class="accent">na swojej półce.</span>',
-        lead: 'Napisz kilka słów o swoim sklepie, a wyślemy ofertę dla sprzedawców.',
+        lead: 'Napisz kilka słów o swoim sklepie, a wyślemy ofertę dla sprzedawców – razem ze świątecznym zestawem kampanii.',
+        xmas: {
+          pill: 'Świąteczna kampania prezentowa',
+          h: '13 islandzkich Mikołajów. | Jeden prezent, którego każdy naprawdę użyje.',
+          lead: 'Islandczycy spędzają święta w drodze – do rodziny, do domku letniskowego, na polowanie. Lunchee to praktyczny prezent dla nich wszystkich. Oto gotowa świąteczna kampania dla Twojego sklepu.',
+          countdown: 'dni do Wigilii',
+          greeting: 'Gleðileg jól!',
+          guideH: 'Przewodnik prezentowy dla Twoich klientów',
+          guide: [
+            ['nature', 'Dla myśliwego', 'Ciepły lunch na wrzosowisku w sezonie na pardwy.'],
+            ['pearl', 'Dla rodziny z domkiem letniskowym', 'Weekend w bústaður, obiad już w samochodzie.'],
+            ['city', 'Dla kierowcy w trasie', 'Reykjavík–Akureyri z prawdziwym posiłkiem po drodze.'],
+            ['glamour', 'Dla kogoś, kto ma wszystko', 'Coś, czego jeszcze nie ma – i będzie używać codziennie.']
+          ],
+          kitH: 'Twój świąteczny zestaw kampanii',
+          kit: [
+            ['gift', 'Gotowy zestaw prezentowy', 'Lunchbox, torba termiczna i sztućce w jednym pudełku – kompletny prezent, bez dokupowania.'],
+            ['image', 'Materiały na półkę i witrynę', 'Świąteczny wobbler, plakat i zawieszki prezentowe po islandzku i angielsku.'],
+            ['star', 'Pakiet do social mediów', 'Gotowe posty i stories na Adwent – wystarczy dodać nazwę sklepu.']
+          ],
+          planH: 'Twój świąteczny plan',
+          plan: [
+            ['Teraz – listopad', 'Zamów i odbierz materiały kampanii.'],
+            ['Od 1 grudnia', 'Na półce ze świąteczną ekspozycją.'],
+            ['12–24 grudnia', 'Sezon islandzkich Mikołajów – szczyt zakupów prezentów.']
+          ],
+          cta: 'Dołącz do świątecznej kampanii',
+          snowOn: 'Śnieg: wł.',
+          snowOff: 'Śnieg: wył.'
+        },
         button: 'Zostań sprzedawcą',
         companyLabel: 'Sklep / firma',
         fields: [
