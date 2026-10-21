@@ -151,7 +151,6 @@ h3 { font-size: 20px; font-weight: 700; line-height: 1.2; color: var(--blue); }
 }
 .badge svg { width: 28px; height: 28px; padding: 6px; border-radius: 50%; fill: none; stroke: var(--white); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; box-sizing: border-box; }
 .badge--heat svg { background: var(--coral); }
-.badge--power svg { background: var(--blue); }
 .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
 .facts li { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; align-items: center; background: var(--white); border-radius: 16px; padding: 12px 14px; color: var(--muted); font-size: 14px; line-height: 1.2; box-shadow: var(--shadow); }
 .facts .ico { grid-row: span 2; width: 26px; height: 26px; stroke-width: 2; }

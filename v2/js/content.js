@@ -477,12 +477,11 @@ window.LUNCHEE_SHARED = {
   pl: {
     'hero.tagline': 'Twój czas na ciepły posiłek',
     'badge.heat': 'Do 60°C',
-    'badge.power': '12V · 24V · 230V',
     'hero.h1': 'Kraina ognia i lodu.',
     'hero.h2': 'I ciepłego lunchu.',
     'hero.sub': 'Elektryczny lunchbox zasilany z gniazda 12V lub 24V w samochodzie. Ciepłe jedzenie w około 20&nbsp;minut – <strong>w trasie, na budowie, między kursami.</strong>',
     'hero.alt': 'Podróżniczka je ciepły posiłek z lunchboxa obok samochodu na islandzkiej drodze',
-    'stats.1': 'zasilanie z auta',
+    'stats.1': 'auto lub gniazdko',
     'stats.2': 'do ciepłego posiłku',
     'stats.3b': 'Torba termiczna',
     'stats.3': 'w zestawie',
