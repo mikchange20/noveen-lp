@@ -142,13 +142,16 @@ h3 { font-size: 20px; font-weight: 700; line-height: 1.2; color: var(--blue); }
 .hero__actions { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
 .hero__photo { position: relative; border-radius: 28px; overflow: visible; aspect-ratio: 4 / 3.8; }
 .hero__photo > img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; border-radius: 28px; box-shadow: 0 40px 70px -40px rgba(0, 40, 90, .55); }
-.badges { position: absolute; left: 14px; bottom: -22px; display: flex; gap: 8px; }
-.badge { position: relative; width: clamp(64px, 17vw, 96px); filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .25)); }
-.badge img { width: 100%; }
-.badge i { position: absolute; left: 4%; right: 4%; font-style: normal; text-align: center; color: var(--white); font-weight: 800; text-transform: uppercase; line-height: 1.05; letter-spacing: .02em; }
-.badge--heat i { top: 67%; font-size: clamp(7px, 1.8vw, 10px); }
-.badge--power { width: clamp(76px, 20vw, 112px); }
-.badge--power i { top: 74%; left: 20%; right: 4%; font-size: clamp(7px, 1.8vw, 10px); }
+.badges { position: absolute; left: 14px; bottom: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 8px; border-radius: 999px;
+  background: rgba(255, 255, 255, .78); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, .9); box-shadow: 0 10px 24px -14px rgba(0, 40, 90, .55);
+  color: var(--blue); font: 700 14px/1 var(--num); white-space: nowrap;
+}
+.badge svg { width: 28px; height: 28px; padding: 6px; border-radius: 50%; fill: none; stroke: var(--white); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; box-sizing: border-box; }
+.badge--heat svg { background: var(--coral); }
+.badge--power svg { background: var(--blue); }
 .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
 .facts li { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; align-items: center; background: var(--white); border-radius: 16px; padding: 12px 14px; color: var(--muted); font-size: 14px; line-height: 1.2; box-shadow: var(--shadow); }
 .facts .ico { grid-row: span 2; width: 26px; height: 26px; stroke-width: 2; }
@@ -158,10 +161,8 @@ h3 { font-size: 20px; font-weight: 700; line-height: 1.2; color: var(--blue); }
   .hero__title { font-size: clamp(36px, 4.1vw, 54px); }
   .hero__title .line { white-space: nowrap; }
   .hero__photo { aspect-ratio: 4 / 4.3; max-height: 72vh; }
-  .badges { left: -26px; bottom: -24px; }
-  .badge { width: 84px; }
-  .badge--power { width: 98px; }
-  .badge i { font-size: 9px; }
+  .badges { left: 18px; bottom: 18px; }
+  .badge { font-size: 15px; }
   .facts { grid-column: 1 / -1; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 8px; }
   .facts li { padding: 16px 18px; font-size: 15px; }
   .facts b { font-size: 22px; white-space: nowrap; }
