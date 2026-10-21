@@ -420,6 +420,16 @@ h3 { font-size: 20px; font-weight: 700; line-height: 1.2; color: var(--blue); }
 .foot a { color: var(--white); text-decoration: none; }
 .foot a:hover { text-decoration: underline; }
 
+/* ---------- Glow that follows the mouse (same idea as the Flavo LP) ---------- */
+.glow { position: relative; isolation: isolate; --glow: rgba(255, 255, 255, .45); --glow-2: rgba(255, 255, 255, .14); }
+.glow__layer {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0; transition: opacity .5s ease;
+  background: radial-gradient(560px circle at var(--mx, 50%) var(--my, 50%), var(--glow), var(--glow-2) 40%, transparent 70%);
+}
+.glow.is-glow .glow__layer { opacity: 1; }
+.hero-wrap.glow { --glow: rgba(242, 185, 12, .3); --glow-2: rgba(118, 147, 223, .16); }
+.cta.glow, .foot.glow { --glow: rgba(242, 185, 12, .34); --glow-2: rgba(118, 147, 223, .2); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .reveal, .reveal-load { opacity: 1; transform: none; }

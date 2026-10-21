@@ -213,6 +213,27 @@
     setTimeout(() => $('.form [name="name"]').focus({ preventScroll: true }), 600);
   }));
 
+  // Soft glow that follows the mouse on .glow sections (mouse only, off with reduced motion) – as on the Flavo LP
+  if (!reduce) {
+    $$('.glow').forEach((el) => { const l = document.createElement('span'); l.className = 'glow__layer'; l.setAttribute('aria-hidden', 'true'); el.prepend(l); });
+    let last = null, graf = 0;
+    addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      const el = e.target instanceof Element ? e.target.closest('.glow') : null;
+      if (last && last !== el) last.classList.remove('is-glow');
+      last = el;
+      if (!el) return;
+      cancelAnimationFrame(graf);
+      graf = requestAnimationFrame(() => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        el.style.setProperty('--my', `${e.clientY - r.top}px`);
+        el.classList.add('is-glow');
+      });
+    }, { passive: true });
+    document.documentElement.addEventListener('pointerleave', () => last && last.classList.remove('is-glow'));
+  }
+
   // Header shadow after scrolling
   const nav = $('#nav');
   const onScroll = () => nav.classList.toggle('is-scrolled', scrollY > 10);
