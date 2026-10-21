@@ -1,5 +1,9 @@
 # Noveen – landing page
 
+> **Uwaga (22.10.2026):** strona Lunchee przeniosła się do osobnego repozytorium **lunchee-is**
+> (https://github.com/mikchange20/lunchee-is, https://mikchange20.github.io/lunchee-is/, docelowo https://lunchee.is).
+> Folder `v2/` tutaj to już tylko kopia z dnia przeniesienia – zmian nie robimy tutaj.
+
 Zwykła strona HTML (bez instalowania czegokolwiek), publikowana przez GitHub Pages.
 
 ## Gdzie są wersje
