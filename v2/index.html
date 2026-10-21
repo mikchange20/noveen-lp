@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..800&family=Outfit:wght@500..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261021-4">
+<link rel="stylesheet" href="css/style.css?v=20261021-5">
 </head>
 <body>
 
@@ -45,6 +45,7 @@
     <figure class="hero__photo reveal-load" style="--d:2">
       <!-- Gimmie the Trip expedition photo -->
       <img src="assets/img/hero-iceland.jpg" alt="Traveller eating a hot meal from the lunch box next to her car on an Icelandic road" data-i18n-alt="hero.alt" width="1080" height="1350" fetchpriority="high">
+      <span class="gift-tag" data-xmas-tag hidden></span>
       <div class="badges" aria-hidden="true">
         <span class="badge badge--heat"><img src="assets/img/badge-60c.png" alt="" width="203" height="360"><i data-i18n="badge.heat">up to</i></span>
         <span class="badge badge--power"><img src="assets/img/badge-3power.png" alt="" width="239" height="360"><i data-i18n="badge.power">power sources</i></span>
@@ -76,7 +77,9 @@
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="15" rx="2"/><path d="M4 11h16M8 7h8"/><circle cx="8" cy="14.5" r="1"/><circle cx="16" cy="14.5" r="1"/><path d="M6.5 18v2.5M17.5 18v2.5"/></svg>
         <b data-i18n="who.drivers">Drivers &amp; fleets</b><span data-i18n="who.drivers.s">A real meal between rides</span>
       </a>
-      <a class="tile" href="companies" data-aud="companies" aria-pressed="false">
+      <a class="tile tile--gift" href="companies" data-aud="companies" aria-pressed="false">
+        <span class="gift__ribbon" aria-hidden="true"></span>
+        <svg class="gift__bow" viewBox="0 0 64 40" aria-hidden="true"><path d="M32 22C24 6 6 2 6 14s18 10 26 8zM32 22c8-16 26-20 26-8s-18 10-26 8z"/><path d="M32 22 22 38M32 22l10 16" stroke-width="6" stroke-linecap="round"/><circle cx="32" cy="22" r="6"/></svg>
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16v11H4zM3 7h18v3H3zM12 7v14"/><path d="M12 7c-2-4-6-4-6-1.5S9 7 12 7c3 0 6-.5 6-1.5S14 3 12 7z"/></svg>
         <b data-i18n="who.companies">Companies</b><span data-i18n="who.companies.s">A gift your team will use every day</span>
       </a>
@@ -92,6 +95,9 @@
 
   <!-- 5 · HOW YOU USE IT (dynamic) -->
   <section class="how section" id="how" data-dyn="how"></section>
+
+  <!-- 5b · CHRISTMAS GIFT CAMPAIGN (stores only, test version) -->
+  <section class="xmas" id="xmas" data-dyn="xmas" hidden></section>
 
   <!-- 6 · PRODUCT (shared) -->
   <section class="product" id="product">
@@ -200,7 +206,7 @@
   <p class="foot__contact"><a href="mailto:mikolaj.chrustowski@gmail.com">mikolaj.chrustowski@gmail.com</a> · <a href="tel:+3547825558">+354 782 5558</a></p>
 </footer>
 
-<script src="js/content.js?v=20261021-4" defer></script>
-<script src="js/main.js?v=20261021-4" defer></script>
+<script src="js/content.js?v=20261021-5" defer></script>
+<script src="js/main.js?v=20261021-5" defer></script>
 </body>
 </html>

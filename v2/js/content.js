@@ -127,6 +127,36 @@ window.LUNCHEE_COPY = {
 
     companies: {
       title: 'Lunchee for companies in Iceland',
+      xmas: {
+        tag: 'Christmas gift idea',
+        pill: 'Christmas campaign for companies',
+        h: '13 Yule Lads. | One gift the whole team will use.',
+        lead: 'Give every employee a hot lunch – at the desk, on site or on the road. A practical Christmas gift that stays in use all year, not in a drawer.',
+        countdown: 'days left to order for Christmas',
+        greeting: 'Order by 1 December – delivered before Christmas. Gleðileg jól!',
+        guideH: 'A gift for everyone on the team',
+        guide: [
+          ['pearl', 'For the office', 'Lunch from home, warm at the desk – no queue for the microwave.'],
+          ['nature', 'For the field crew', 'A hot lunch on site, from the van’s 12V socket.'],
+          ['city', 'For the drivers', 'Plugs into 12V or 24V – lunch is hot when they park.'],
+          ['glamour', 'For the one who has everything', 'Something they don’t have yet – and will use every day.']
+        ],
+        kitH: 'What each employee gets',
+        kit: [
+          ['gift', 'A complete gift', 'Electric lunch box with a thermal bag – ready to give.'],
+          ['star', 'Your logo', 'Branding with your company logo – just ask.'],
+          ['box', 'Their favourite colour', 'Pearl, Nature, City or Glamour – mix them in one order.']
+        ],
+        planH: 'How it works',
+        plan: [
+          ['Now – 1 December', 'Tell us your team size and colours.'],
+          ['Within days', 'You get an offer and a company invoice.'],
+          ['Before Christmas', 'The gifts are delivered to your office.']
+        ],
+        cta: 'Order gifts for your team',
+        snowOn: 'Snow: on',
+        snowOff: 'Snow: off'
+      },
       cta: 'Get a company offer',
       why: {
         h: 'A Christmas gift | they’ll use every working day.',
@@ -330,6 +360,36 @@ window.LUNCHEE_COPY = {
 
     companies: {
       title: 'Lunchee dla firm na Islandii',
+      xmas: {
+        tag: 'Pomysł na prezent świąteczny',
+        pill: 'Świąteczna kampania dla firm',
+        h: '13 islandzkich Mikołajów. | Jeden prezent, którego użyje cały zespół.',
+        lead: 'Daj każdemu pracownikowi ciepły lunch – przy biurku, na budowie albo w trasie. Praktyczny prezent na święta, który zostaje w użyciu przez cały rok, a nie w szufladzie.',
+        countdown: 'dni na zamówienie przed świętami',
+        greeting: 'Zamów do 1 grudnia – dostarczymy przed świętami. Gleðileg jól!',
+        guideH: 'Prezent dla każdego w zespole',
+        guide: [
+          ['pearl', 'Dla biura', 'Lunch z domu, ciepły przy biurku – bez kolejki do mikrofali.'],
+          ['nature', 'Dla ekipy w terenie', 'Ciepły lunch na budowie, z gniazda 12V w busie.'],
+          ['city', 'Dla kierowców', 'Podłączasz do 12V lub 24V – lunch jest ciepły, kiedy parkują.'],
+          ['glamour', 'Dla kogoś, kto ma wszystko', 'Coś, czego jeszcze nie ma – i będzie używać codziennie.']
+        ],
+        kitH: 'Co dostaje każdy pracownik',
+        kit: [
+          ['gift', 'Kompletny prezent', 'Elektryczny lunchbox z torbą termiczną – gotowy do wręczenia.'],
+          ['star', 'Wasze logo', 'Branding z logo firmy – wystarczy zapytać.'],
+          ['box', 'Ulubiony kolor', 'Pearl, Nature, City albo Glamour – kolory mieszasz w jednym zamówieniu.']
+        ],
+        planH: 'Jak to działa',
+        plan: [
+          ['Teraz – 1 grudnia', 'Napisz, ile osób liczy zespół i jakie kolory.'],
+          ['W ciągu kilku dni', 'Dostajesz ofertę i fakturę na firmę.'],
+          ['Przed świętami', 'Prezenty trafiają do Twojego biura.']
+        ],
+        cta: 'Zamów prezenty dla zespołu',
+        snowOn: 'Śnieg: wł.',
+        snowOff: 'Śnieg: wył.'
+      },
       cta: 'Oferta dla firmy',
       why: {
         h: 'Świąteczny prezent, | którego użyją w każdy dzień pracy.',

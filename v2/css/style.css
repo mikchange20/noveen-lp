@@ -295,6 +295,89 @@ h3 { font-size: 20px; font-weight: 700; line-height: 1.2; color: var(--blue); }
 .shop__stock { margin-top: 4px; font-size: 13px; font-weight: 700; color: #2E8B3D; }
 .shop__stock::before { content: "● "; }
 
+/* ---------- 5b · Christmas campaign (companies only) ---------- */
+.xmas {
+  position: relative; isolation: isolate; overflow: hidden; color: var(--white);
+  padding: clamp(56px, 7vw, 100px) var(--gutter);
+  background: linear-gradient(180deg, #002B57 0%, var(--blue-deep) 55%, var(--blue) 100%);
+}
+.xmas[hidden] { display: none; }
+/* northern lights */
+.xmas::before {
+  content: ""; position: absolute; z-index: -1; inset: -20% -10% 40%;
+  background:
+    radial-gradient(40% 50% at 25% 40%, rgba(188, 221, 63, .35), transparent 70%),
+    radial-gradient(35% 45% at 70% 30%, rgba(118, 147, 223, .45), transparent 70%),
+    radial-gradient(30% 40% at 50% 60%, rgba(120, 230, 200, .25), transparent 70%);
+  filter: blur(30px); animation: aurora 14s ease-in-out infinite alternate;
+}
+@keyframes aurora { to { transform: translateX(6%) skewX(-6deg) scaleY(1.15); opacity: .75; } }
+/* snowy ground line */
+.xmas::after {
+  content: ""; position: absolute; z-index: -1; left: 0; right: 0; bottom: -1px; height: 46px;
+  background: radial-gradient(60px 26px at 10% 100%, var(--cream) 98%, transparent), radial-gradient(90px 34px at 35% 100%, var(--cream) 98%, transparent), radial-gradient(70px 28px at 62% 100%, var(--cream) 98%, transparent), radial-gradient(100px 36px at 88% 100%, var(--cream) 98%, transparent);
+}
+.xmas__inner { max-width: var(--max); margin: 0 auto; display: grid; gap: 28px; }
+.pill--xmas { background: var(--coral); gap: 8px; }
+.pill--xmas .ico { width: 18px; height: 18px; stroke: var(--white); stroke-width: 2; }
+.xmas h2 { font-size: clamp(30px, 4.6vw, 56px); max-width: 22ch; }
+.xmas h2 .tt-blue { color: var(--yellow); }
+.xmas .lead { color: rgba(255, 255, 255, .88); }
+.xmas__count {
+  justify-self: start; display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .25); border-radius: 22px; padding: 16px 22px;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.xmas__count b { grid-row: span 2; font: 800 clamp(48px, 7vw, 76px)/1 var(--num); color: var(--yellow); }
+.xmas__count span { font-weight: 700; font-size: 17px; }
+.xmas__count em { font-style: normal; color: rgba(255, 255, 255, .75); font-size: 15px; }
+.xmas__sub { color: var(--white); font-size: clamp(20px, 2.2vw, 26px); font-weight: 800; }
+
+.guide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: -12px; }
+.guide li { position: relative; background: var(--white); color: var(--ink); border-radius: 22px; padding: 14px 14px 18px; box-shadow: 0 24px 40px -28px rgba(0, 0, 0, .7); }
+.guide li:nth-child(2) { transition-delay: .08s; } .guide li:nth-child(3) { transition-delay: .16s; } .guide li:nth-child(4) { transition-delay: .24s; }
+.guide img { aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; transition: transform .5s var(--ease); }
+.guide li:hover img { transform: translateY(-4px) rotate(-3deg); }
+.guide b { display: block; color: var(--blue); font-size: 17px; line-height: 1.2; }
+.guide p { margin-top: 4px; font-size: 14px; color: var(--muted); line-height: 1.35; }
+.guide__tag { position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; border-radius: 50%; background: var(--coral); display: grid; place-items: center; }
+.guide__tag .ico { width: 18px; height: 18px; stroke: var(--white); stroke-width: 2; }
+@media (min-width: 960px) { .guide { grid-template-columns: repeat(4, 1fr); gap: 16px; } .guide li { padding: 18px 18px 22px; } }
+
+.xmas__grid { display: grid; gap: 16px; }
+@media (min-width: 960px) { .xmas__grid { grid-template-columns: 1.2fr 1fr; gap: 20px; } }
+.xmas__kit, .xmas__plan { background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .2); border-radius: 28px; padding: clamp(20px, 3vw, 32px); }
+.xmas__kit ul { margin-top: 16px; display: grid; gap: 14px; }
+.xmas__kit li { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+.xmas__kit .ico { width: 48px; height: 48px; padding: 11px; border-radius: 14px; background: var(--yellow); box-sizing: border-box; stroke-width: 2; }
+.xmas__kit b { font-size: 17px; }
+.xmas__kit p { margin-top: 2px; font-size: 15px; color: rgba(255, 255, 255, .82); }
+.xmas__plan ol { margin: 16px 0 22px; display: grid; gap: 0; counter-reset: plan; }
+.xmas__plan li { position: relative; padding: 0 0 18px 34px; counter-increment: plan; }
+.xmas__plan li::before { content: counter(plan); position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--yellow); color: var(--blue); font: 800 13px/24px var(--num); text-align: center; }
+.xmas__plan li:not(:last-child)::after { content: ""; position: absolute; left: 11px; top: 28px; bottom: 4px; width: 2px; background: rgba(255, 255, 255, .25); }
+.xmas__plan b { display: block; font: 800 16px/1.2 var(--num); color: var(--yellow); }
+.xmas__plan span { font-size: 15px; color: rgba(255, 255, 255, .88); }
+.snow-toggle { display: inline-flex; align-items: center; gap: 6px; margin: 14px 0 0 12px; background: none; border: 0; color: rgba(255, 255, 255, .75); font: 600 13px/1 var(--font); cursor: pointer; }
+.snow-toggle .ico { width: 16px; height: 16px; stroke: currentColor; }
+.snow-toggle[aria-pressed="false"] { opacity: .6; }
+
+/* gift tag on the hero photo (stores) */
+.gift-tag {
+  position: absolute; top: 18px; right: -10px; z-index: 2; display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 16px 9px 22px; background: var(--coral); color: var(--white); font-weight: 800; font-size: 14px;
+  border-radius: 6px 999px 999px 6px; box-shadow: 0 12px 24px -12px rgba(0, 0, 0, .5); transform: rotate(4deg);
+  animation: swing 3.2s ease-in-out infinite; transform-origin: 0 50%;
+}
+.gift-tag[hidden] { display: none; }
+.gift-tag::before { content: ""; position: absolute; left: 8px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%; background: var(--white); }
+.gift-tag .ico { width: 18px; height: 18px; stroke: var(--white); stroke-width: 2; }
+@keyframes swing { 50% { transform: rotate(-2deg); } }
+
+/* falling snow canvas */
+.snow { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 40; pointer-events: none; }
+.snow[hidden] { display: none; }
+
 /* ---------- 6 · Product (cream, like the packaging panel) ---------- */
 .product { background: var(--cream); }
 .product__inner { max-width: var(--max); margin: 0 auto; padding: clamp(52px, 7vw, 96px) var(--gutter) clamp(40px, 5vw, 64px); }
@@ -429,6 +512,30 @@ h3 { font-size: 20px; font-weight: 700; line-height: 1.2; color: var(--blue); }
 .glow.is-glow .glow__layer { opacity: 1; }
 .hero-wrap.glow { --glow: rgba(242, 185, 12, .3); --glow-2: rgba(118, 147, 223, .16); }
 .cta.glow, .foot.glow { --glow: rgba(242, 185, 12, .34); --glow-2: rgba(118, 147, 223, .2); }
+
+/* ---------- "Companies" tile wrapped as a Christmas gift – unwraps on click ---------- */
+.tile--gift { overflow: visible; }
+.tile--gift:not([aria-pressed="true"]) { padding-right: 58px; }
+.tile--gift:not([aria-pressed="true"]) { background: linear-gradient(135deg, var(--coral) 0%, #D9442A 100%); border-color: transparent; box-shadow: var(--shadow); }
+.tile--gift:not([aria-pressed="true"]) b, .tile--gift:not([aria-pressed="true"]) span { color: var(--white); }
+.tile--gift:not([aria-pressed="true"]) .ico { stroke: var(--white); }
+.tile--gift:not([aria-pressed="true"]):hover { animation: gift-wiggle .6s ease-in-out; }
+@keyframes gift-wiggle { 20% { transform: translateY(-4px) rotate(-2deg); } 50% { transform: translateY(-4px) rotate(2deg); } 80% { transform: translateY(-4px) rotate(-1deg); } }
+.gift__ribbon { position: absolute; top: 0; bottom: 0; right: 22px; width: 14px; background: var(--yellow); box-shadow: inset 3px 0 rgba(255, 255, 255, .35); border-radius: 2px; pointer-events: none; transform-origin: bottom; }
+.gift__bow { position: absolute; top: -18px; right: -2px; width: 62px; fill: var(--yellow); stroke: var(--yellow); filter: drop-shadow(0 4px 4px rgba(120, 40, 0, .3)); pointer-events: none; }
+.tile--gift[aria-pressed="true"] .gift__ribbon, .tile--gift[aria-pressed="true"] .gift__bow { opacity: 0; visibility: hidden; }
+.tile--gift.is-unwrapping { animation: gift-pop .5s var(--ease); }
+.tile--gift.is-unwrapping .gift__ribbon { visibility: visible; animation: ribbon-off .6s var(--ease) forwards; }
+.tile--gift.is-unwrapping .gift__bow { visibility: visible; animation: bow-off .8s var(--ease) forwards; }
+@keyframes gift-pop { 40% { transform: scale(1.06); } }
+@keyframes ribbon-off { from { opacity: 1; transform: scaleY(1); } to { opacity: 0; transform: scaleY(0); } }
+@keyframes bow-off { from { opacity: 1; transform: none; } to { opacity: 0; transform: translate(40px, -80px) rotate(50deg) scale(.8); } }
+.confetti { position: absolute; left: 50%; top: 40%; width: 8px; height: 12px; border-radius: 2px; pointer-events: none; z-index: 3; animation: confetti-fly .9s cubic-bezier(.15, .7, .3, 1) forwards; }
+@keyframes confetti-fly { from { opacity: 1; transform: translate(-50%, -50%) rotate(0); } to { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); } }
+
+/* snowflake cursor in the Christmas campaign (companies) */
+html[data-aud="companies"] body { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='none' stroke-linecap='round'%3E%3Cg stroke='%230054A6' stroke-width='3.2'%3E%3Cpath d='M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7'/%3E%3C/g%3E%3Cg stroke='%23fff' stroke-width='1.6'%3E%3Cpath d='M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7M9 4l3 2 3-2M9 20l3-2 3 2'/%3E%3C/g%3E%3C/svg%3E") 14 14, auto; }
+html[data-aud="companies"] .glow { --glow: rgba(255, 255, 255, .5); --glow-2: rgba(118, 147, 223, .2); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
