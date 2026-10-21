@@ -144,7 +144,7 @@ window.LUNCHEE_COPY = {
         kitH: 'What each employee gets',
         kit: [
           ['gift', 'A complete gift', 'Electric lunch box with a thermal bag – ready to give.'],
-          ['star', 'Your logo', 'Branding with your company logo – just ask.'],
+          ['star', 'A brand you can trust', 'European brand with full documentation – not an anonymous gadget.'],
           ['box', 'Their favourite colour', 'Pearl, Nature, City or Glamour – mix them in one order.']
         ],
         planH: 'How it works',
@@ -164,7 +164,7 @@ window.LUNCHEE_COPY = {
         items: [
           ['gift', 'A gift with a purpose.', 'Used every day, all year round – not another gift card.'],
           ['truck', 'Made for the field team.', 'Runs on 12V and 24V in any company vehicle, and on 230V in the office.'],
-          ['star', 'Your colours, your logo.', 'Mix four colours in one order. Branding with your logo – just ask.']
+          ['star', 'Everyone picks a colour.', 'Mix four colours in one order – Pearl, Nature, City or Glamour.']
         ]
       },
       how: {
@@ -172,7 +172,7 @@ window.LUNCHEE_COPY = {
         kind: 'cards',
         cards: [
           { h: 'Christmas gift for the team', p: 'One order – every employee gets their own box in their favourite colour.',
-            mock: { title: 'Christmas gift order', type: 'list', rows: ['Pearl × 40', 'City × 50', 'Nature × 30 <em>+ your logo</em>'] } },
+            mock: { title: 'Christmas gift order', type: 'list', rows: ['Pearl × 40', 'City × 50', 'Nature × 30'] } },
           { h: 'Year-round benefit', p: 'Part of the welcome pack for new hires, or standard kit for crews in the field.',
             mock: { title: 'Welcome pack', type: 'check', rows: ['Laptop', 'Work jacket', 'Car-powered lunch box <em>+ thermal bag</em>'] } }
         ]
@@ -180,7 +180,7 @@ window.LUNCHEE_COPY = {
       faq: [
         ['Can we order for the whole company?', 'Yes – from a few units to hundreds. Mix colours in one order.'],
         ['Will it arrive before Christmas?', 'Order by 1 December and we’ll deliver before Christmas.'],
-        ['Can you add our logo?', 'Yes – tell us when you request the offer and we’ll include branding.'],
+        ['Is it a quality product?', 'Yes – a European brand with full documentation and a local contact in Iceland.'],
         ['Invoice for the company?', 'Yes, a regular company invoice.']
       ],
       form: {
@@ -377,7 +377,7 @@ window.LUNCHEE_COPY = {
         kitH: 'Co dostaje każdy pracownik',
         kit: [
           ['gift', 'Kompletny prezent', 'Elektryczny lunchbox z torbą termiczną – gotowy do wręczenia.'],
-          ['star', 'Wasze logo', 'Branding z logo firmy – wystarczy zapytać.'],
+          ['star', 'Marka, której można zaufać', 'Europejska marka z pełną dokumentacją – a nie anonimowy gadżet.'],
           ['box', 'Ulubiony kolor', 'Pearl, Nature, City albo Glamour – kolory mieszasz w jednym zamówieniu.']
         ],
         planH: 'Jak to działa',
@@ -397,7 +397,7 @@ window.LUNCHEE_COPY = {
         items: [
           ['gift', 'Prezent z sensem.', 'Używany codziennie, przez cały rok – a nie kolejna karta podarunkowa.'],
           ['truck', 'Stworzony dla ekip w terenie.', 'Działa na 12V i 24V w każdym aucie firmowym i na 230V w biurze.'],
-          ['star', 'Wasze kolory, Wasze logo.', 'Cztery kolory w jednym zamówieniu. Branding z logo firmy – wystarczy zapytać.']
+          ['star', 'Każdy wybiera kolor.', 'Cztery kolory w jednym zamówieniu – Pearl, Nature, City albo Glamour.']
         ]
       },
       how: {
@@ -405,7 +405,7 @@ window.LUNCHEE_COPY = {
         kind: 'cards',
         cards: [
           { h: 'Świąteczny prezent dla zespołu', p: 'Jedno zamówienie – każdy pracownik dostaje swój lunchbox w ulubionym kolorze.',
-            mock: { title: 'Zamówienie świąteczne', type: 'list', rows: ['Pearl × 40', 'City × 50', 'Nature × 30 <em>+ Wasze logo</em>'] } },
+            mock: { title: 'Zamówienie świąteczne', type: 'list', rows: ['Pearl × 40', 'City × 50', 'Nature × 30'] } },
           { h: 'Benefit na cały rok', p: 'W pakiecie powitalnym dla nowych osób albo jako standardowe wyposażenie ekip w terenie.',
             mock: { title: 'Pakiet powitalny', type: 'check', rows: ['Laptop', 'Kurtka robocza', 'Elektryczny Lunchbox <em>+ torba termiczna</em>'] } }
         ]
@@ -413,7 +413,7 @@ window.LUNCHEE_COPY = {
       faq: [
         ['Czy możemy zamówić dla całej firmy?', 'Tak – od kilku do kilkuset sztuk. Kolory można mieszać w jednym zamówieniu.'],
         ['Czy dotrze przed świętami?', 'Zamów do 1 grudnia, a dostarczymy przed świętami.'],
-        ['Czy możecie dodać nasze logo?', 'Tak – napisz o tym w zapytaniu, a uwzględnimy branding w ofercie.'],
+        ['Czy to dobry jakościowo produkt?', 'Tak – europejska marka z pełną dokumentacją i lokalnym kontaktem na Islandii.'],
         ['Faktura na firmę?', 'Tak, standardowa faktura dla firmy.']
       ],
       form: {
